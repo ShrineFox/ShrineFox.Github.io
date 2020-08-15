@@ -1,0 +1,151 @@
+@import "compass/css3";
+@charset "utf-8";
+
+.parallax { 
+    background-image: url("../images/p.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.wave {
+	display: none;
+}
+
+.parallax2 { 
+    background-image: url("https://pbs.twimg.com/media/DRrVgwrVQAADAos.jpg");
+	background: -webkit-radial-gradient(circle, #000, #420000);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family: calibri, serif;
+	background-color: #262626;
+    color:#fff;
+	overflow-x: hidden;
+	background-size: cover;
+    background: -webkit-radial-gradient(circle, #000, #420000);
+    font-family: calibri, serif;
+	overflow-x: hidden;
+}
+
+a:visited {
+    color: #ff0000;
+	text-decoration: none;
+}
+
+a:link { 
+    color: #ff0000;
+	text-decoration: none;
+}
+
+a:hover { 
+    color: #fff;
+	text-decoration: none;
+}
+
+
+.navigation {
+	position: relative;
+	top: 0;
+	width: 100%;
+	z-index: 21;
+	color: rgba(255,255,255,1);
+	background-color: rgba(0,0,0,0.4);
+	background-repeat: repeat-x;
+	background-position: left;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	text-align: center;
+}
+
+.content {
+	position: relative;
+	z-index:20;
+	margin: 0 auto;
+	padding: 20px 10px 20px 20px;
+	background: url(../images/sec4_bg.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+	background-repeat: no-repeat;
+	background-size: cover;
+	word-wrap: break-word;
+	overflow: hidden;
+	font-size: 14pt;
+}
+
+.content2 {
+	margin: 10px;
+}
+
+td:first-child {
+	box-shadow: 1em 0em 1em -1.3em #FF0000;
+}
+
+.carousel-inner {
+	height: 500px;
+}
+
+.footer {
+	margin: 0 0 0 00px;
+	padding: 5px;
+	width: 100%;
+	z-index: 21;
+	color: rgba(255,255,255,1);
+	background-color: rgba(0,0,0,0.4);
+	background-repeat: repeat-x;
+	background-position: left;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	bottom: 0;
+}
+
+.content img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+table {
+	 border-collapse:collapse;
+	 background: url(../images/sec4_bg.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+td {
+overflow: hidden;
+max-width: 400px;
+word-wrap: break-word;
+}
+
+table { 
+border-collapse:collapse;
+  table-layout: fixed;
+  width: 100%
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

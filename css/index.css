@@ -1,0 +1,218 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #029BFB;
+    font-family: 'Open Sans', serif;
+    color: #002040;
+    overflow-x: hidden;
+}
+
+.navigation {
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 21;
+    background-color: #fff;
+    background-repeat: repeat-x;
+    background-position: left;
+    font-family: 'News Cycle', serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.navigation a {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.navigation a:hover {
+	box-shadow: 0em -0.5em 0.5em -.5em #009FFF inset;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #009FFF;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #fb9e3b;
+}
+
+a:active {
+	text-decoration: none;
+	color: #fb9e3b;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #fb9e3b;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.logo {
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+	background-color: #ffffff;
+	padding: 1%;
+}
+
+.text {
+	margin-left:5%;
+	margin-right: 5%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.footer {
+	color: #fff;
+	text-align: center;
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+    cursor: pointer;
+    margin: 0px 4px 0px 2px;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: table-footer-group;
+    position: relative;
+    float: left;
+    margin: 0 12px 0 0;
+}
+
+/* This hides the dropdowns */
+.navigation li ul {
+    display: none;
+}
+
+.navigation ul li a {
+    display: table-footer-group;
+    padding: 1em;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navigation ul li a:hover {
+    background: rgba(0,0,0,0.1);
+}
+/* Display the dropdown */
+.navigation li:hover > ul {
+    display: table-footer-group;
+    position: absolute;
+}
+/* Remove float from dropdown lists */
+.navigation li:hover li {
+    float: none;
+}
+
+.navigation li:hover a {
+    background: rgba(0,0,0,0.4);
+}
+
+.navigation li:hover li a:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+.main-navigation li ul li {
+    border-top: 0;
+}
+/* Displays second level dropdowns to the right of the first level dropdown */
+.navigation ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+/* Simple clearfix */
+
+.navigation ul:before,
+.navigation ul:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.navigation ul:after {
+    clear: both;
+}
+
+.widgetcontainer {
+	font-size: 15px;
+	z-index: 20;
+	border-radius: 12px;
+	padding: 0px 5px 5px 5px;
+}
+
+table {
+	width: 100%;
+}
+
+td {
+	padding:0 2%;
+	width: 50%;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'News Cycle', serif;
+    margin-top: 0px;
+    margin-bottom: -5px;
+}
+
+td:first-child {
+	text-align:center;
+	margin:0 30%;
+	box-shadow: 1em 0em 1em -1.3em #009FFF;
+}
+
+.toggle-inner {
+	display: none;
+}
+
+@media only screen and (max-width: 900px) {
+
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #002040;
+		color: #fff;
+	}
+	.navigation {
+		background-color: #111111;
+	}
+	.content {
+		background-color: #111111;
+	}
+}

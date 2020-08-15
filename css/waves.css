@@ -1,0 +1,68 @@
+html, body {
+    height: 100%;
+	overflow-anchor: none;
+}
+
+#bgCanvas {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.ocean {
+	height: 0;
+	position: relative;
+	bottom: -20px;
+	z-index: -2;
+}
+
+.wave {
+    background: url(../images/wave.svg) repeat-x;
+    position: relative;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+    z-index: -2;
+}
+
+.wave:nth-of-type(2) {
+    animation: wave 4s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+    z-index: -1;
+	position: relative;
+	bottom: 198px;
+}
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+@keyframes swell {
+    0%, 100% {
+        transform: translate3d(0,-25px,0);
+    }
+
+    50% {
+        transform: translate3d(0,5px,0);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .wave {
+        opacity: 0.5;
+    }
+
+    .wave:nth-of-type(2) {
+        opacity: 0.4;
+    }
+}
