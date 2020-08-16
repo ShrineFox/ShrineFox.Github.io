@@ -22,7 +22,7 @@ body {
     background-repeat: repeat-x;
     background-position: left;
     font-family: 'News Cycle', serif;
-    font-size: 25px;
+	font-size:20px;
     text-align: center;
 }
 
@@ -94,92 +94,6 @@ a:visited {
     background-color: #fff;
 }
 
-.noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
-    cursor: pointer;
-    margin: 0px 4px 0px 2px;
-}
-
-.navigation ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navigation ul li {
-	display: table-footer-group;
-	position: relative;
-	float: left;
-	margin: 0 12px 0 0;
-}
-
-/* This hides the dropdowns */
-.navigation li ul {
-    display: none;
-}
-
-.navigation ul li a {
-    display: table-footer-group;
-    padding: 1em;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-    .navigation ul li a:hover {
-        background: rgba(0,0,0,0.1);
-    }
-/* Display the dropdown */
-.navigation li:hover > ul {
-    display: table-footer-group;
-    position: absolute;
-}
-/* Remove float from dropdown lists */
-.navigation li:hover li {
-    float: none;
-}
-
-.navigation li:hover a {
-    background: rgba(0,0,0,0.4);
-}
-
-.navigation li:hover li a:hover {
-    background: rgba(0,0,0,0.5);
-}
-
-.main-navigation li ul li {
-    border-top: 0;
-}
-/* Displays second level dropdowns to the right of the first level dropdown */
-.navigation ul ul ul {
-    left: 100%;
-    top: 0;
-}
-
-/* Simple clearfix */
-
-.navigation ul:before,
-.navigation ul:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.navigation ul:after {
-    clear: both;
-}
-
-.widgetcontainer {
-    font-size: 15px;
-    z-index: 20;
-    border-radius: 12px;
-    padding: 0px 5px 5px 5px;
-}
-
 .text {
     width:98%; 
     margin:1%;
@@ -216,9 +130,6 @@ td:first-child {
 }
 
 @media only screen and (max-width: 900px) {
-    .navigation {
-        font-size: 12px;
-    }
     .image {
         font-size: 50px;
     }

@@ -6,6 +6,7 @@
     <title>ShrineFox - Home</title>
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <link href="css/waves.css" rel="stylesheet" type="text/css">
+	<link href="css/dropdown.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/4c3075832a.js" crossorigin="anonymous"></script>
     <script src="https://shrinefox.com/Scripts/Amicitia/jquery-3.3.1.min.js"></script>
     <script src="js/bubbles.js"></script>
@@ -14,11 +15,20 @@
 <body>
 	<canvas id='bgCanvas'></canvas>
 	<div class="navigation">
-		<i class="fa fa-home" aria-hidden="true"></i> Home
-		<a href="amicitia.html"><img src="images/amicitia.svg" style="top: 4px;position: relative;" width="25" height="25"> Amicitia</a> 
-		<a href="projects.html"><i class="fa fa-tools"></i> Projects</a> 
-		<a href="https://shrinefox.com/blog"><i class="fa fa-book"></i> Dev Blog</a> 
-		<a href="credits.html"><i class="fa fa-user-friends"></i> Credits</a>
+		<ul>
+			<li><i class="fa fa-home" aria-hidden="true"></i> Home</li>
+			<li><a href="amicitia.html"><img src="images/amicitia.svg" style="top: 4px;position: relative;" width="25" height="25"> Amicitia</a>
+				<ul>
+					<li><a href="https://amicitia.github.io/">Mods</a></li>
+					<li><a href="https://shrinefox.com/forum">Forum</a></li>
+					<li><a href="https://shrinefox.com/guides/">Guides</a></li>
+					<li><a href="https://amicitia.miraheze.org/wiki/Main_Page">Wiki</a></li>
+					<li><a href="https://amicitia-team.tumblr.com/">News</a></li>
+				</ul></li>
+			<li><a href="projects.html"><i class="fa fa-tools"></i> Projects</a></li>
+			<li><a href="https://shrinefox.com/blog"><i class="fa fa-book"></i> Dev Blog</a></li>
+			<li><a href="credits.html"><i class="fa fa-user-friends"></i> Credits</a></li>
+		</ul>
 	</div>
 	<div class="ocean">
 		<div class="wave"></div>
