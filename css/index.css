@@ -130,6 +130,11 @@ td:first-child {
 }
 
 @media only screen and (max-width: 900px) {
+
+	.text {
+			font-size: 8px;
+		}
+	
     .image {
         font-size: 50px;
     }
