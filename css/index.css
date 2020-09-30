@@ -62,7 +62,6 @@ a:visited {
 
 .logo {
     position: relative;
-    z-index: 2;
     opacity: 1;
     transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
