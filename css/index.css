@@ -166,8 +166,16 @@ td:first-child {
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #002040;
-        color: #fff;
+        color: #ccc;
     }
+	
+	h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+	
+	body b {
+		color: #fff;
+	}
 
     .navigation {
         background-color: #111111;
