@@ -6,10 +6,10 @@ window.onload = function() {
     w = c.width = window.innerWidth,
     h = c.height = window.innerHeight;
 
-  var i, bubblesNumber = w * h > 750000 ? 50 : 10,
+  var i, bubblesNumber = w * h > 75000 ? 50 : 10,
     objects = [],
     maxRadius = w * h > 500000 ? 20 : 15,
-    maxYVelocity = 2;
+    maxYVelocity = 3;
 
   function randomInRange(min, max) {
     return Math.random() * (max - min) + min;

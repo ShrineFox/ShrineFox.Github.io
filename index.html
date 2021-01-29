@@ -1,83 +1,137 @@
 <!doctype html>
 <html>
 <head>
-    <link rel='shortcut icon' href='favicon.png' type='image/x-icon' />
+    <link rel='shortcut icon' href='images/favicon.png' type='image/x-icon' />
     <meta charset="utf-8">
     <title>ShrineFox - Home</title>
-    <link href="css/index.css" rel="stylesheet" type="text/css">
     <link href="css/waves.css" rel="stylesheet" type="text/css">
-	<link href="css/dropdown.css" rel="stylesheet" type="text/css">
+	<link href="css/index.css" rel="stylesheet" type="text/css">
+	<link href="css/sidebar.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/4c3075832a.js" crossorigin="anonymous"></script>
     <script src="https://shrinefox.com/Scripts/Amicitia/jquery-3.3.1.min.js"></script>
     <script src="js/bubbles.js"></script>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=News+Cycle|Open+Sans">
+	<script src="js/sidebar.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-	<canvas id='bgCanvas'></canvas>
-	<div class="navigation">
-		<ul>
-			<li><i class="fa fa-home" aria-hidden="true"></i> Home</li>
-			<li><a href="amicitia.html"><img src="images/amicitia.svg" style="top: 4px;position: relative;" width="25" height="25"> Amicitia</a>
+<section id="sidebar"> 
+  <div id="sidebar-nav">   
+    <ul>
+	<p style="color:#FFFFFF7F;padding-left:14px;">Amicitia Network</p>
+      <li class="active"><a href="https://amicitia.github.io/"><i class="fa fa-desktop"></i> amicitia.github.io</a></li>
+      <li><a href="https://shrinefox.com/forum"><i class="fa fa-comments-o"></i>Forum</a></li>   
+	  <li><a href="https://shrinefox.com/guides/"><i class="fa fa-graduation-cap"></i> Guides</a></li>
+      <li><a href="https://amicitia.miraheze.org/wiki/Main_Page"><i class="fa fa-users"></i> Wiki</a></li>
+	  <li><a href="https://amicitia-team.tumblr.com/"><i class="fa fa-newspaper"></i> News</a></li>
+	  <li><a href="https://shrinefox.com/forum/app.php/faqpage"><i class="fa fa-question-circle"></i> FAQs</a></li>
+	<p style="color:#FFFFFF7F;padding-left:14px;margin-bottom: 0px;">Apps</p>
+      <li><a href="https://shrinefox.com/textsearch"><i class="fa fa-search"></i> Text Search</a></li>
+      <li><a href="https://amicitia.github.io/docs/flowscript"><i class="fa fa-file-code"></i>Flowscript Docs</a></li>   
+	  <li><a href="https://amicitia.github.io/docs/files"><i class="fa fa-folder-open"></i> Files</a></li>
+      <li><a href="https://shrinefox.com/PatchCreator"><i class="fa fa-check-square"></i> Patch.yml Creator</a></li>
+    </ul>
+  </div>
+</section>
+<section id="content">
+  <div id="header">
+    <!--<div class="header-nav">
+      <div class="menu-button">
+        <i class="fa fa-navicon"></i>
+      </div>
+      <!--<div class="navigation">
+        <ul>
+			<li><a href="https://shrinefox.com/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+			<li><a href="https://shrinefox.com/amicitia"><img src="https://shrinefox.github.io/images/amicitia.svg" style="top: 4px;position: relative;" width="25" height="25"> Amicitia</a>
 				<ul>
-					<li><a href="https://amicitia.github.io/">Mods</a></li>
-					<li><a href="https://shrinefox.com/forum">Forum</a></li>
-					<li><a href="https://shrinefox.com/guides/">Guides</a></li>
-					<li><a href="https://amicitia.miraheze.org/wiki/Main_Page">Wiki</a></li>
-					<li><a href="https://amicitia-team.tumblr.com/">News</a></li>
+					<li><a href="https://amicitia.github.io/"><i class="fa fa-github" aria-hidden="true"></i> Mods</a></li>
+					<li><a href="https://shrinefox.com/forum"><i class="fa fa-comment" aria-hidden="true"></i> Forum</a></li>
+					<li><a href="https://shrinefox.com/guides/"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Guides</a></li>
+					<li><a href="https://amicitia.miraheze.org/wiki/Main_Page"><i class="fa fa-users" aria-hidden="true"></i> Wiki</a></li>
+					<li><a href="https://amicitia-team.tumblr.com/"><i class="fa fa-newspaper" aria-hidden="true"></i> News</a></li>
+                    <li><a href="https://shrinefox.com/forum/app.php/faqpage"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQs</a></li>
 				</ul></li>
-			<li><a href="projects.html"><i class="fa fa-tools"></i> Projects</a></li>
-			<li><a href="https://shrinefox.com/blog"><i class="fa fa-book"></i> Dev Blog</a></li>
-			<li><a href="https://shrinefox.github.io/commissions"><i class="fa fa-gift"></i> Commissions</a></li>
-			<li><a href="credits.html"><i class="fa fa-user-friends"></i> Credits</a></li>
+			<li><a href="https://shrinefox.com/projects"><i class="fa fa-tools" aria-hidden="true"></i> Projects</a></li>
+			<li><a href="https://shrinefox.com/blog"><i class="fa fa-book" aria-hidden="true"></i> Dev Blog</a></li>
+            <!--<li><a href="https://shrinefox.com/commissions"><i class="fa fa-gift"></i> Commissions</a></li>
+			<li><a href="https://shrinefox.com/credits"><i class="fa fa-user-friends" aria-hidden="true"></i> Credits</a></li>
 		</ul>
+      </div>
+    </div>-->
+  </div>
+  <div class="content">
+    <div class="content-header">
+<!--Header start-->
+<div class="outer-header">
+	<canvas id="bgCanvas"></canvas>
+	<div class="inner-header flex">
+		<center><table>
+			<tr>
+				<td><img src="./images/logo.svg" style="width:250px;height:250px;"></td></td>
+				<td>
+					<table>
+						<tr>
+							<td><h1>amicitia.github.io</h1></td>
+						</tr>
+						<tr>
+							<td><h3>mods • tools • guides • cheats</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table></center>
 	</div>
-	<div class="ocean">
-		<div class="wave"></div>
-		<div class="wave"></div>
-	</div>
-    <div class="logo">
-        <center>
-            <a href="index.html">
-                <img src="images/logo.svg" width="179" height="179">
-            </a>
-        </center>
-	</div>
-	<div class="content">
-		<div class="text">
-			<center><h1>Welcome to ShrineFox.com</h1></center>
-				<table>
-					<tr>
-						<td>
-							<div class="image"><i class="fa fa-gamepad" aria-hidden="true"></i></div>
-							<h2>About ShrineFox</h2>
-						</td>
-					<td>
-						I am a hobbyist <b>web developer</b>, <b>content creator</b>, <b>programmer</b> and <b>artist</b>.
-						<br>My interests include <i>videogame development, modification</i> and <i>preservation</i>.
-						<br>I love JRPGs and tokusatsu.
-						<br><br>This website is the central hub that links to my various projects.
-						<br><br>My social media accounts are:
-						<br><a href="https://www.youtube.com/c/ShrineFox"><i class="fa fa-youtube-play" aria-hidden="true"></i> <b>YouTube</b></a>
-						<br><a href="https://www.twitch.tv/shrinefox"><i class="fa fa-twitch" aria-hidden="true"></i> <b>Twitch</b></a>
-						<br><a href="https://github.com/ShrineFox"><i class="fa fa-github" aria-hidden="true"></i> <b>GitHub</b></a>
-						<br><a href="https://twitter.com/ShrineFoxMods"><i class="fa fa-twitter" aria-hidden="true"></i> <b>Twitter</b></a>
-						<br><br>You can find my mods at:
-						<br><a href="https://gamebanana.com/members/1568750"><i class="fa fa-pepper-hot" aria-hidden="true"></i> <b>Gamebanana</b></a>
-						<br><a href="https://amicitia.github.io/author/ShrineFox"><img src="images/amicitia.svg" style="top: 4px;position: relative;" width="20" height="20"> <b>Amicitia</b></a>
-					</td>
-				</tr>
-			</table>
+	<!--Waves start-->
+	<div>
+		<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+		viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+		<defs>
+		<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+		</defs>
+		<g class="parallax">
+		<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(17,17,17,0.33)" />
+		<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(17,17,17,0.6)" />
+		<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(17,17,17,0.6)" />
+		<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(17,17,17,1)" />
+		</g>
+		</svg>
+			</div>
+			<!--Waves end-->
 		</div>
-	</div>
-	
-	<div class="ocean">
-		<div class="wave"></div>
-		<div class="wave"></div>
-	</div>
-	
-	<div class="footer">
-		<div class="content" style="text-align: center;">&copy; ShrineFox 2020. Like my work? <a href="https://ko-fi.com/shrinefox"><i class="fa fa-coffee" aria-hidden="true"></i> Support me!</a></div>
-	</div>
-	
+		<!--Content starts-->
+		<div class="inner-content">
+			<div class="main">
+		<center><h1>Welcome to ShrineFox.com</h1></center>
+			<table id="wrap">
+				<tbody>
+				<tr>
+					<td style="box-shadow: 1em 0em 1em -1.3em #009FFF;">
+						<center><h1><i class="fa fa-gamepad" aria-hidden="true"></i></h1>
+						<br><h2>About ShrineFox</h2></center>
+					</td>
+				<td style="padding:20px;">
+					I am a hobbyist <b>web developer</b>, <b>content creator</b>, <b>programmer</b> and <b>artist</b>.
+					<br>My interests include <i>videogame development, modification</i> and <i>preservation</i>.
+					<br>I love JRPGs and tokusatsu.
+					<br><br>This website is the central hub that links to my various projects.
+					<br><br>My social media accounts are:
+					<br><a href="https://www.youtube.com/c/ShrineFox"><i class="fa fa-youtube-play" aria-hidden="true"></i> <b>YouTube</b></a>
+					<br><a href="https://www.twitch.tv/shrinefox"><i class="fa fa-twitch" aria-hidden="true"></i> <b>Twitch</b></a>
+					<br><a href="https://github.com/ShrineFox"><i class="fa fa-github" aria-hidden="true"></i> <b>GitHub</b></a>
+					<br><a href="https://twitter.com/ShrineFoxMods"><i class="fa fa-twitter" aria-hidden="true"></i> <b>Twitter</b></a>
+					<br><br>You can find my mods at:
+					<br><a href="https://gamebanana.com/members/1568750"><i class="fa fa-pepper-hot" aria-hidden="true"></i> <b>Gamebanana</b></a>
+					<br><a href="https://amicitia.github.io/author/ShrineFox"><img src="images/favicon.png" style="top: 4px;position: relative;" width="20" height="20"> <b>Amicitia</b></a>
+					<br>
+				</td>
+			</tr>
+		</tbody></table>
+				<br><br>© <a href="https://shrinefox.com/" style="color:#999;">ShrineFox</a> 2020 - 2021. <a href="https://ko-fi.com/shrinefox"><i class="fa fa-coffee" aria-hidden="true"></i> Support</a>
+			</div>
+		</div>
+		<!--Content ends-->
+  </div>
+</section>
+<!--Sidebar container ends-->
 </body>
 </html>

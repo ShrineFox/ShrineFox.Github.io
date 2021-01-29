@@ -1,16 +1,11 @@
-﻿html {
-    height: 100%;
-    overflow-x: hidden;
+﻿a, a:visited, a:active {
+	color: #009FFF;
+	text-decoration: none;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #029BFB;
-    font-family: 'Open Sans', serif;
-    color: #002040;
-    overflow-x: hidden;
-    overflow-x: hidden;
+a:hover {
+	color: #FB9E3B;
+	text-decoration: none;
 }
 
 .navigation {
@@ -18,179 +13,97 @@ body {
     top: 0;
     width: 100%;
     z-index: 21;
-    background-color: #fff;
+    background-color: #111111;
     background-repeat: repeat-x;
     background-position: left;
-    font-family: 'News Cycle', serif;
-	font-size:20px;
+    font-size: 20px;
     text-align: center;
 }
 
 .navigation a {
-	padding-left: 15px;
-	padding-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .navigation a:hover {
-	box-shadow: 0em -0.5em 0.5em -.5em #009FFF inset;
-	text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: #009FFF;
-}
-
-a:hover {
-	text-decoration: none;
-	color: #fb9e3b;
-}
-
-a:active {
-	text-decoration: none;
-	color: #fb9e3b;
-}
-
-a:hover {
-	text-decoration: none;
-	color: #fb9e3b;
-}
-
-a:visited {
-	text-decoration: none;
-}
-
-.logo {
-    position: relative;
-    opacity: 1;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-}
-
-.content {
-    position: relative;
-    width: 100%;
-    background-color: #ffffff;
-    padding: 1%;
-}
-
-.image {
-    font-size: 85px;
-    color: #009fff;
-}
-
-.image h1, .image h2, .image h3, .image h4, .image h5 {
-    color: #111;
-}
-
-.footer {
-    color: #111;
+    box-shadow: 0em -0.5em 0.5em -.5em #009FFF inset;
     text-align: center;
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    background-color: #fff;
 }
 
-.text {
-    width:98%; 
-    margin:1%;
+.navigation ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation a {
+    display: block;
+    padding: 0 10px;
+    line-height: 60px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+	background-color: #222222;
+}
+
+/* Hide Dropdowns by Default */
+.navigation ul ul {
+    display: none;
+    position: absolute;
+    top: 60px; /* the height of the main .navigation */
+}
+
+/* Display Dropdowns on Hover */
+.navigation ul li:hover > ul {
+    display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+.navigation ul ul li {
+    width: 180%;
+    float: none;
+    display: list-item;
+    right: 65px;
+    position: relative;
+    background-color: #111111;
+}
+
+/* Second, Third and more Tiers	*/
+.navigation ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 170px;
+}
+
+
+/* Change this in order to change the Dropdown symbol */
+li > a:after {
+    content: ' ▼';
+    font-size: 12px;
+    top: -1px;
+    position: relative;
+}
+
+li > a:only-child:after {
+    content: '';
 }
 
 table {
-	text-align:center; 
-	margin-left:auto; 
-	margin-right:auto; 
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 tr, td {
-	text-align:left;
-}
-
-td {
-	padding: 10px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'News Cycle', serif;
-    margin-top: 0px;
-    margin-bottom: -5px;
-}
-
-td:first-child {
-    text-align: center;
-    box-shadow: 1em 0em 1em -1.3em #009FFF;
-	width: 35%;
+    text-align: left;
 }
 
 .toggle-inner {
     display: none;
-}
-
-@media only screen and (max-width: 900px) {
-
-	.text {
-			font-size: 8px;
-		}
-	
-    .image {
-        font-size: 50px;
-    }
-
-    .footer {
-        font-size: 10px;
-    }
-
-    .image h1, .image h2, .image h3, .image h4, .image h5 {
-        font-size: 10px;
-    }
-
-    .navigation img {
-        max-width: 16px;
-    }
-
-    .text img {
-        max-width: 150px;
-    }
-
-    img {
-        height: auto;
-    }
-
-    td {
-        font-size: 8px;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #002040;
-        color: #ccc;
-    }
-	
-	h1, h2, h3, h4, h5, h6 {
-		color: #fff;
-	}
-	
-	body b {
-		color: #fff;
-	}
-
-    .navigation {
-        background-color: #111111;
-    }
-
-    .content {
-        background-color: #111111;
-    }
-
-    .footer {
-        color: #fff;
-        background-color: #111;
-    }
-
-    .image h1, .image h2, .image h3, .image h4, .image h5 {
-        color: #fff;
-    }
 }
