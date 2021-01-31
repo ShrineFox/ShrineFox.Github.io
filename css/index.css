@@ -1,109 +1,104 @@
-﻿a, a:visited, a:active {
-	color: #009FFF;
-	text-decoration: none;
+﻿/* Colors */
+:root {
+	--darkblue: #0B2653;
+	--medblue: #092E6D;
+	--lightblue: #063DA0;
+	--linkblue: #009FFF;
+	--linkorange: #FB9E3B;
+	--textwhite: #FFFFFF;
+	--textgrey: #999999;
+	--bgblack: #111111;
 }
 
-a:hover {
-	color: #FB9E3B;
-	text-decoration: none;
+/* Fonts and Spacing */
+body, html {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+	height:auto !important;
 }
 
-.navigation {
-    position: relative;
-    top: 0;
-    width: 100%;
-    z-index: 21;
-    background-color: #111111;
-    background-repeat: repeat-x;
-    background-position: left;
-    font-size: 20px;
-    text-align: center;
-}
-
-.navigation a {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.navigation a:hover {
-    box-shadow: 0em -0.5em 0.5em -.5em #009FFF inset;
-    text-align: center;
-}
-
-.navigation ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    position: relative;
-}
-
-.navigation ul li {
-    display: inline-block;
-}
-
-.navigation a {
-    display: block;
-    padding: 0 10px;
-    line-height: 60px;
-    text-decoration: none;
-}
-
-.navigation a:hover {
-	background-color: #222222;
-}
-
-/* Hide Dropdowns by Default */
-.navigation ul ul {
-    display: none;
-    position: absolute;
-    top: 60px; /* the height of the main .navigation */
-}
-
-/* Display Dropdowns on Hover */
-.navigation ul li:hover > ul {
-    display: inherit;
-}
-
-/* Fisrt Tier Dropdown */
-.navigation ul ul li {
-    width: 180%;
-    float: none;
-    display: list-item;
-    right: 65px;
-    position: relative;
-    background-color: #111111;
-}
-
-/* Second, Third and more Tiers	*/
-.navigation ul ul ul li {
-    position: relative;
-    top: -60px;
-    left: 170px;
-}
-
-
-/* Change this in order to change the Dropdown symbol */
-li > a:after {
-    content: ' ▼';
-    font-size: 12px;
-    top: -1px;
-    position: relative;
-}
-
-li > a:only-child:after {
-    content: '';
-}
-
-table {
-    text-align: center;
+/* Tables */
+table { 
+    table-layout:fixed;
+	width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
-tr, td {
-    text-align: left;
+td {
+	width:100%;
+	margin: 0;
+	padding: 0;
 }
 
+/* Headers */
+
+h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight:300;
+	letter-spacing: 2px;
+	font-size:40pt;
+	color: var(--textwhite);
+}
+
+h2 {
+	font-family: 'Lato', sans-serif;
+	font-weight:200;
+	letter-spacing: 2px;
+	font-size:30pt;
+	color: var(--textwhite);
+}
+
+h3 {
+	font-family: 'Lato', sans-serif;
+	font-weight:400;
+	letter-spacing: 2px;
+	font-size:20pt;
+	color: var(--textwhite);
+}
+
+/* Links */
+a, a:visited, a:active {
+	color: var(--linkblue);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--linkorange);;
+	text-decoration: none;
+}
+
+/* ShowHide.js */
 .toggle-inner {
-    display: none;
+	display: none;
+}
+
+/* Page Elements */
+.logo img {
+	max-width:250px;
+	max-height:250px;
+	z-index: 1;
+	fill:white;
+	padding-right:15px;
+	display:inline-block;
+	vertical-align: middle;
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+	body {
+		font-size: 10pt;
+	}
+	h1 {
+		font-size: 22pt;
+	}
+	h2 {
+		font-size: 18pt;
+	}
+	h3 {
+		font-size: 15pt;
+	}
 }
