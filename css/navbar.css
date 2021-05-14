@@ -1,0 +1,70 @@
+.navbar {
+	width: 100%;
+    top: 0px;
+    position: fixed;
+    z-index: 20;
+    transition: all .5s ease-in-out 0.1s;
+    overflow: hidden;
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+.navbar::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+.navbar-outer {
+    position: relative;
+    height: auto;
+}
+
+.navbar-inner {
+    max-width: 1200px;
+    min-height: 60px;
+}
+
+.navbar-container {
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: #092e6d73;
+    backdrop-filter: blur(6px);
+    user-select: none;
+}
+
+.navbar-item {
+    line-height: 80px;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    padding-right: 12px;
+    height: 100px;
+    padding-left: 12px;
+    font-size: 20pt;
+    height: 78px;
+    color: #fff;
+    transition: all .1s ease-in-out 0s;
+}
+
+.navbar-item:hover {
+    border-bottom: 4px solid #fff;
+}
+
+.amicitia-logo {
+    position: relative;
+    left: -8px;
+    display: inline-block;
+    float: left;
+    width: 32px;
+    height: 1px;
+}
+
+.amicitia-svg {
+    position: absolute;
+    width: 45px;
+    height: 80px;
+    border-bottom: 2px solid transparent;
+    background: url(https://amicitia.github.io/images/logo.svg) center center/36px no-repeat;
+    transition: all .1s ease-in-out 0s;
+}

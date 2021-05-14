@@ -1,10 +1,19 @@
 var canvas = document.getElementById('bgCanvas');
 window.onload = function() {
-
+  var game = document.getElementById("game").value.toLowerCase();
   var c = document.getElementById('bgCanvas'),
     $ = c.getContext('2d'),
     w = c.width = window.innerWidth,
     h = c.height = window.innerHeight;
+
+	if (game == "p5" || game == "p5r" || game == "p5d" || game == "p5s" || game == "smt3") {
+		c.style.background = "linear-gradient(120deg, #009fff 0%, rgb(113 0 0) 100%)"; }
+	if (game == "p4" || game == "p4g" || game == "p4d" || game == "p4au") {
+		c.style.background = "linear-gradient(120deg, rgb(0, 159, 255) 0%, rgb(187 176 36) 100%)"; }
+	if (game == "p3fes" || game == "p3p" || game == "p3d") {
+		c.style.background = "linear-gradient(120deg, rgb(0, 159, 255) 0%, rgb(52 187 36) 100%)"; }
+	if (game == "cfb" || game == "pq" || game == "pq2") {
+		c.style.background = "linear-gradient(120deg, rgb(0, 159, 255) 0%, rgb(255 77 184) 100%)"; }
 
   var i, bubblesNumber = w * h > 750000 ? 50 : 10,
     objects = [],

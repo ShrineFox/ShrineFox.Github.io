@@ -1,0 +1,54 @@
+.card img:hover {
+    transform: scale(1.1);
+}
+
+.card img {
+    display: block;
+	object-fit: contain;
+    width: 100%;
+    transition: all .3s ease;
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.entry-content {
+    word-wrap: break-word;
+    color: #ccc;
+}
+
+.card__body {
+    padding: 20px 20px 0px 20px;
+}
+
+.card {
+    background: rgb(115 197 255 / 7%);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+}
+
+@media (min-width: 768px)
+.tags-links {
+    flex-basis: 50%;
+}
+
+.tags-links {
+    flex-basis: 100%;
+}
+
+.tag-cloud-link, .tags-links a {
+    display: inline-block;
+    border: 1px solid #009fff;
+    color: #009fff;
+    padding: .2em 1em;
+    border-radius: 99px;
+    transition: all .2s;
+    margin: 0 .25rem .5rem 0;
+    text-transform: lowercase;
+}
+
+.tag-cloud-link:hover, .tags-links a:hover {
+    background: #009fff;
+    color: #fff !important;
+    text-decoration: none;
+}

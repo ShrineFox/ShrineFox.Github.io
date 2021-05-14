@@ -1,0 +1,293 @@
+:root {
+    --space: 2rem;
+    --space-xs: calc(var(--space) / 3);
+    --space-sm: calc(var(--space) / 2);
+    --space-md: calc(var(--space) * 2);
+    --color-primary: lightgray;
+    --color-accent: whitesmoke;
+    --color-dark: black;
+    --color-mid: gray;
+    --color-light: white;
+    --color-highlight: dodgerblue;
+    --radius: 0.125rem;
+}
+
+/* Here are the base styles for the main layout and sticky component */
+* {
+    box-sizing: border-box;
+}
+
+.article {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: 40%;
+}
+
+.sidebar {
+    --offset: var(--space-md);
+    flex-grow: 1;
+    flex-basis: 300px;
+    align-self: start;
+    position: fixed;
+    min-width: 25%;
+    top: var(--offset);
+    transform: translateX(-9999px);
+    z-index: 19;
+}
+
+.component {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.component .contents {
+    max-height: 500px;
+    overflow-y: auto;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+.component .contents::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+.sidebar .component {
+    max-height: calc(100vh - var(--offset) * 2);
+}
+
+/*
+ * Other styles
+**/
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/* Until flexbox gap is supported in all modern browsers, we use the negative margin trick to create space between the children elements */
+main {
+    margin-bottom: calc(var(--space-md) * -1);
+    margin-left: calc(var(--space-md) * -1);
+}
+
+main > * {
+	margin-bottom: 0;
+	margin-left: var(--space-md);
+}
+
+.component {
+    position: relative;
+    border: 0px;
+}
+
+.component .sidebarheader,
+.component .footer {
+	padding: var(--space-sm);
+	text-align: center;
+}
+
+.component .sidebarheader {
+	border-bottom: inherit;
+}
+
+.component .footer {
+	display: flex;
+	justify-content: space-between;
+	border-top: inherit;
+}
+
+.component .contents {
+	padding: 0px;
+	max-height: 500px;
+	overflow-y: auto;
+	color: #FFF;
+}
+
+.empty-text {
+    padding: var(--space);
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.item {
+    position: relative;
+    appearance: none;
+    display: flex;
+    align-items: center;
+    padding: var(--space);
+    outline: none;
+    width: 100%;
+    background-color: #092e6d73;
+    backdrop-filter: blur(6px);
+    border: 0px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    color: #FFF;
+    font-size: 12pt;
+}
+
+.item:active {
+	transform: translateY(1px);
+}
+
+.item:focus {
+	outline: 2px solid var(--color-highlight);
+}
+
+.item > * {
+	pointer-events: none;
+}
+
+.sidebarheader {
+	background-color: #0000007F;
+}
+
+.info {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.title,
+.subtitle {
+    width: 100%;
+    height: 0.5rem;
+    border-radius: var(--radius);
+}
+
+.title {
+    margin-bottom: 23px;
+    font-size: 20pt;
+}
+
+.subtitle {
+    font-size: 12pt;
+}
+
+.thumbnail {
+    flex-shrink: 0;
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--radius);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: var(--space-sm);
+}
+
+    .grid .item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .grid .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid .thumbnail {
+        --size: 100px;
+        margin-bottom: var(--space);
+    }
+
+.list .item {
+	padding-top: 5px;
+    padding-bottom: 13px;
+}
+
+.list .thumbnail {
+    --size: 50px;
+    font-size: xxx-large;
+}
+
+.item:hover {
+    background-color: #0000007F;
+    color: #FFF;
+}
+
+.button:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+/* Toggle */
+input[type="checkbox"]:checked ~ .sidebar {
+    transform: translateX(0);
+    transition: all 0.25s;
+}
+
+input[type=checkbox] {
+    transition: all 0.25s;
+    box-sizing: border-box;
+}
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    top: 25px;
+    left: 20px;
+    max-width: var(--space-md);
+}
+
+.spinner {
+    height: 4px;
+	width: 100%;
+    background-color: #fff;
+}
+
+.horizontal {
+    position: relative;
+    float: left;
+    margin-top: 10px;
+}
+
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 10px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 900px) {
+    .sidebar {
+        min-width: 50%;
+    }
+}
