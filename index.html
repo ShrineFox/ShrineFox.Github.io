@@ -159,7 +159,7 @@
 							<br>
 							<div class="subheaderselect">
 								<!--Select serving as website navigation-->
-								<select onchange="window.open(this.Value,'_self');">
+								<select onchange="if (this.value) window.location.href=this.value">
 									<option value="https://shrinefox.github.io/" selected>shrinefox.github.io</option>
 									<option value="https://amicitia.github.io/">amicitia.github.io</option>
 									<option value="https://shrinefox.com/">ShrineFox.com</option>
