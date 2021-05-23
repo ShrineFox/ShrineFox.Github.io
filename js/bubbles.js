@@ -184,13 +184,14 @@ function Theme() {
 	var game = document.getElementById("game").value.toLowerCase();
 	var theme = document.getElementById("theme").value.toLowerCase();
 	var cookie = getCookie("theme");
+	console.log("Get Cookie Theme Value: " + cookie );
 	
 	if (cookie == "") {
 		setCookie("theme", theme, 30);
+		selectElement("theme", theme);
 	}
 	else {
-		selectElement("theme", theme);
-		setCookie("theme", theme, 30);
+		selectElement("theme", cookie);
 	}
 
 	if (theme == "") {
@@ -244,9 +245,11 @@ function setCookie(cname, val, exdays)
 	exdate.setDate(exdate.getDate() + exdays);
 	var c_value = escape(val) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
 	document.cookie= cname + "=" + c_value;
+	console.log("Set Cookie Theme Value: " + val );
 }
 
 function selectElement(id, valueToSelect) {    
     let element = document.getElementById(id);
     element.value = valueToSelect;
+	console.log("Select Element Value: " + element.value );
 }
