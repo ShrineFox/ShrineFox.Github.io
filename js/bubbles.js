@@ -11,10 +11,6 @@ window.onload = function() {
 		w = c.width = window.innerWidth,
 		h = c.height = window.innerHeight;
 	
-  	if (getCookie("theme") == "") {
-		document.cookie = "theme=; expires=Sat, 3 Dec 2022 12:00:00 UTC; path=/";
-	}
-	
 	Theme();
 
 	var i, bubblesNumber = w * h > 750000 ? 50 : 10,
@@ -179,22 +175,20 @@ window.onload = function() {
 
 };
 
+function ThemeChanged() {
+	var theme = document.getElementById("theme").value.toLowerCase();
+	setCookie("theme", theme, 30);
+	
+	Theme();
+}
+
 function Theme() {
 	var c = document.getElementById('bgCanvas')
 	var game = document.getElementById("game").value.toLowerCase();
-	var theme = document.getElementById("theme").value.toLowerCase();
-	var cookie = getCookie("theme");
-	console.log("Get Cookie Theme Value: " + cookie );
 	
-	if (cookie == "" && cookie != theme) {
-		setCookie("theme", theme, 30);
-		selectElement("theme", theme);
-		Theme();
-	}
-	else if (cookie != theme) {
-		selectElement("theme", cookie);
-		Theme();
-	}
+	var theme = getCookie("theme");
+	console.log("Apply theme from cookie: " + theme );
+	selectElement("theme", theme);
 
 	if (theme == "") {
 		if (game == "") {
@@ -247,11 +241,9 @@ function setCookie(cname, val, exdays)
 	exdate.setDate(exdate.getDate() + exdays);
 	var c_value = escape(val) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
 	document.cookie= cname + "=" + c_value;
-	console.log("Set Cookie Theme Value: " + val );
 }
 
 function selectElement(id, valueToSelect) {    
     let element = document.getElementById(id);
     element.value = valueToSelect;
-	console.log("Select Element Value: " + element.value );
 }
