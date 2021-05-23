@@ -1,5 +1,6 @@
 :root {
 	--text: #FFFFFF7F;
+	--innertext: #FFFFFFCF;
     --blue: #092E6D;
     --link: #009FFF;
     --linkhover: #FB9E3B;
@@ -68,16 +69,16 @@ h1 {
     font-weight: 300;
 }
 
-h2, h3, h4, h5 {
-    font-weight: 200;
-}
-
 h2 {
 	font-size: 32pt;
 }
 
 h3 {
 	font-size: 20pt;
+}
+
+.text {
+	color: var(--innertext);
 }
 
 /* Header */
@@ -125,13 +126,24 @@ h3 {
 .blogtype {
     color: var(--heading);
     font-size: 15px;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 10px;
-    border: 4px solid;
-    border-image: linear-gradient( 90deg, var(--heading), rgb(255 255 255 / 0%)) 1;
     border-left: none;
     border-top: none;
     border-right: none;
+}
+
+.blogdivider {
+	  background-image: linear-gradient(to right, var(--heading), transparent);
+	  height: 4px;
+	  margin-bottom: 10px;
+}
+
+.blogdate {
+	color: var(--text);
+	vertical-align: bottom;
+	width: 25%;
+	text-align: center;
 }
 
 footer {
@@ -215,8 +227,10 @@ main > * {
     margin-left: var(--space-md);
 }
 
-* {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .sidebar {
@@ -330,6 +344,7 @@ main > * {
 
 .sidebarheader {
 	background-color: var(--blue);
+	opacity: 0.8;
 }
 
 .info {
@@ -393,7 +408,7 @@ main > * {
 }
 
 .item:hover {
-    background-color: var(--link);
+    background-color: #FFFFFF10;
     color: var(--heading);
 }
 
@@ -466,67 +481,57 @@ input[type=checkbox] {
     text-align: center;
 }
 
-.chevron::before {
-    border-style: solid;
-    border-width: 0.15em 0.15em 0 0;
-    content: '';
-    display: inline-block;
-    height: 0.45em;
-    left: 0.15em;
-    position: relative;
-    top: 1.8em;
-    left: 0.5em;
-    transform: rotate(135deg);
-    vertical-align: top;
-    width: 0.45em;
-    float: right;
-}
-
-.title-left {
-    display: inline;
-}
-
-.game, .type
-{
-	width: fit-content;
-}
-
-.game:hover, .type:hover 
-{
-	text-decoration: underline;
-	cursor: pointer;
-	width: fit-content;
-}
-
 /* Dropdown */
-
-.select-css {
-    color: var(--heading);
-    max-width: 15px;
-    opacity: 0;
-    border: 0px;
+.headerselect select {
+	appearance:none;
     background-color: transparent;
-}
-
-.select-css::-ms-expand {
-	display: none;
-}
-.select-css:hover {
-	border-color: #888;
-}
-.select-css:focus {
-	border-color: #aaa;
-	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
-	box-shadow: 0 0 0 3px -moz-mac-focusring;
-	color: #FFF;
+    color: var(--heading);
+    border: 0;
 	outline: none;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    font-size: 3em;
+    line-height: 1.2em;
+    padding: 0;
+    margin: -15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Lato';
+    font-weight: 300;
 }
 
-.select-css option {
-	font-weight: normal;
-	color: #fff;
-	background: rgba(17, 17, 17, 1);
+.subheaderselect select {
+	appearance:none;
+    background-color: transparent;
+    color: var(--heading);
+    border: 0;
+	outline: none;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    font-size: 3em;
+    line-height: 1.2em;
+    padding: 0;
+    margin: -15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Lato';
 }
+
+.headerselect select:hover, .subheaderselect select:hover {
+	text-decoration: underline;
+}
+
+select:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #000;
+}
+
+
+/* Button */
 
 .button-css {
 	background-color: var(--bgblack);

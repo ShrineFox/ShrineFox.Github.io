@@ -1,4 +1,10 @@
 var canvas = document.getElementById('bgCanvas');
+var score = 0;
+var bubbleColor = '255,255,255';
+var lightColor = '0,159,255';
+var darkColor = '9,46,109';
+var linkHover = '251,158,59';
+
 window.onload = function() {
   var game = document.getElementById("game").value.toLowerCase();
   var c = document.getElementById('bgCanvas'),
@@ -6,14 +12,19 @@ window.onload = function() {
     w = c.width = window.innerWidth,
     h = c.height = window.innerHeight;
 
-	if (game == "p5" || game == "p5r" || game == "p5d" || game == "p5s" || game == "smt3") {
-		c.style.background = "linear-gradient(120deg, #009fff 0%, rgb(113 0 0) 100%)"; }
-	if (game == "p4" || game == "p4g" || game == "p4d" || game == "p4au") {
-		c.style.background = "linear-gradient(120deg, rgb(0, 159, 255) 0%, rgb(187 176 36) 100%)"; }
-	if (game == "p3fes" || game == "p3p" || game == "p3d") {
-		c.style.background = "linear-gradient(120deg, rgb(0, 159, 255) 0%, rgb(52 187 36) 100%)"; }
-	if (game == "cfb" || game == "pq" || game == "pq2") {
-		c.style.background = "linear-gradient(120deg, rgb(0, 159, 255) 0%, rgb(255 77 184) 100%)"; }
+  if (game == "p5" || game == "p5r" || game == "p5d" || game == "p5s" || game == "smt3") {
+	lightColor = '216,47,47'; darkColor = '0,0,0'; }
+  if (game == "p4" || game == "p4g" || game == "p4d" || game == "p4au") {
+	lightColor = '255,175,57'; darkColor = '89,57,0'; linkHover = '255,255,255'; }
+  if (game == "p3fes" || game == "p3p" || game == "p3d") {
+	lightColor = '38,133,191'; darkColor = '10,91,0'; }
+  if (game == "cfb" || game == "pq" || game == "pq2") {
+	lightColor = '255,135,185'; darkColor = '83,9,88'; }
+	
+  document.documentElement.style.setProperty('--link', 'rgb(' + lightColor + ')');
+  document.documentElement.style.setProperty('--blue', 'rgb(' + darkColor + ')');
+  document.documentElement.style.setProperty('--navbar', 'rgba(' + darkColor + ',' + 0.5 + ')');
+  document.documentElement.style.setProperty('--linkhover', 'rgb(' + linkHover + ')');
 
   var i, bubblesNumber = w * h > 750000 ? 50 : 10,
     objects = [],
@@ -64,7 +75,7 @@ window.onload = function() {
 
   Fragment.prototype.render = function($) {
     $.beginPath();
-    $.fillStyle = 'rgba(255,255,255,' + this.opacity + ')';
+    $.fillStyle = 'rgba(' + bubbleColor + ',' + this.opacity + ')';
     $.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2);
     $.fill();
   };
@@ -91,7 +102,7 @@ window.onload = function() {
 
   Bubble.prototype.render = function($) {
     $.beginPath();
-    $.fillStyle = 'rgba(255,255,255,' + this.opacity + ')';
+    $.fillStyle = 'rgba(' + bubbleColor + ',' + this.opacity + ')';
     $.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
     $.fill();
   };
@@ -101,6 +112,12 @@ window.onload = function() {
     for (var i = 0; i < this.fragments; i++) {
       world.objects.push(new Fragment(new Vector(this.x, this.y), new Vector(randomInRange(-2, 2), randomInRange(-2, 2)), randomInRange(2, this.radius / 4), this.hue));
     }
+	objects.push(new Bubble(Math.random() * w, Math.random() * h, -randomInRange(0.5, maxYVelocity), randomInRange(5, maxRadius), randomInRange(1, 10), randomInRange(-40, 40), randomInRange(180, 200)));
+	score++;
+	document.getElementById('score').innerText = score;
+	const rndInt = Math.floor(Math.random() * 4) + 1;
+	var audio = new Audio('./wav/pop' + rndInt + '.wav');
+	audio.play();
   };
 
   function World(physicalProperties, objects, ctx, background) {

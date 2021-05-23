@@ -2,19 +2,22 @@
 <html lang="en">
 	<head>
 		<title>Amicitia Mods</title>
-		<link href="./favicon.ico" rel="shortcut icon" type="image/x-icon" />
-		<link href="./css/amicitia.css" rel="stylesheet" type="text/css">
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
 		<script src="https://shrinefox.com/js/jquery-3.3.1.min.js"></script>
-		<script src="https://shrinefox.com/js/bubbles.js"></script>
-		<script src="https://shrinefox.com/js/clipboard.js"></script>
-		<script src="https://shrinefox.com/js/showhide.js"></script>
-		<script src="https://shrinefox.com/js/hidenav.js"></script>
-		<script src="https://shrinefox.com/js/navigation.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/4c3075832a.js" crossorigin="anonymous"></script>
 		<script data-ad-client="ca-pub-9519592525056753" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<link href="https://shrinefox.github.io/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link href="https://shrinefox.github.io/css/amicitia.css" rel="stylesheet" type="text/css">
+		<script src="https://shrinefox.github.io/js/bubbles.js"></script>
+		<script src="https://shrinefox.github.io/js/clipboard.js"></script>
+		<script src="https://shrinefox.github.io/js/showhide.js"></script>
+		<script src="https://shrinefox.github.io/js/hidenav.js"></script>
+		<script src="https://shrinefox.github.io/js/navigation.js"></script>
 	</head>
 	<body>
+	<audio loop autoplay>
+		<source src="https://shrinefox.github.io/wav/bubbling.wav" type="audio/wav">
+	</audio>
 		<main>
 			<!--Navbar-->
 			<div class="navbar">
@@ -145,9 +148,21 @@
 				<div class="header-inner" style="margin-top: 150px;">
 					<center>
 						<!--Title-->
-						<div class="game"><h1 class="title-left">ShrineFox.com</h1> <span class="chevron bottom"></span></div>
-						<div class="type"><h2 class="title-left">github repo</h2> <span class="chevron bottom"></span></div>
-						</h1>
+						<div class="headerselect">
+						  <select>
+							<option value="0" selected>ShrineFox.com</option>
+						  </select>
+						</div>
+						<!--Subtitle-->
+						<br><div class="subheaderselect">
+						  <select>
+							<option value="0" selected>github repo</option>
+						  </select>
+						</div>
+						<!--Game-->
+						<select class="select-css" onchange="navigate()" id="game" name="game" style="display:none;">
+							<option value="" disabled=""></option>
+						</select>
 					</center>
 					<!--Waves-->
 					<div>
@@ -167,10 +182,6 @@
 				</div>
 				<!--Header End-->
 			</div>
-			<!--Placeholder-->
-			<select style="display:none;" class="select-css" onchange="navigate()" id="game" name="game">
-				<option value="" disabled=""></option>
-			</select>
 			<!--Content-->
 			<div class="content">
 				<table>
@@ -180,26 +191,46 @@
 							<td style="vertical-align:top;">
 								<div class="bloglinks">
 									<div class="blogtype">
-										<a href="https://amicitia-team.tumblr.com/">
-											<h3>
-												<i class="fas fa-newspaper" aria-hidden="true"></i> News
-											</h3>
-										</a>
+										<table>
+											<tr>
+												<td>
+													<a href="https://shrinefox.com/news/">
+														<h3>
+															<i class="fas fa-newspaper" aria-hidden="true"></i> News
+														</h3>
+													</a>
+												</td>
+												<td class="blogdate">
+													Dec 20
+												</td>
+											</tr>
+										</table>
 									</div>
+									<div class="blogdivider"></div>
 									<h4>
 										<a href="https://amicitia-team.tumblr.com/post/638012597777629184">Modding Support for P5R USA!</a>
-									</h4> 12/20/2020
+									</h4>
 									<br>
 									<div class="blogtype">
-										<a href="https://shrinefox.com/guides/">
-											<h3>
-												<i class="fas fa-graduation-cap" aria-hidden="true"></i> Guides
-											</h3>
-										</a>
+										<table>
+											<tr>
+												<td>
+													<a href="https://shrinefox.com/guides/">
+														<h3>
+															<i class="fas fa-graduation-cap" aria-hidden="true"></i> Guides
+														</h3>
+													</a>
+												</td>
+												<td class="blogdate">
+													Jan 21
+												</td>
+											</tr>
+										</table>
 									</div>
+									<div class="blogdivider"></div>
 									<h4>
 										<a href="https://shrinefox.com/guides/2020/09/30/modding-persona-5-royal-jp-on-ps4-fw-6-72/">Modding P5R USA on PS4 FW 5.05 - 6.72</a>
-									</h4> 1/11/2021
+									</h4>
 							</div>
 						</td>
 							<td style="width: 75%;padding-right: 20px;">
@@ -277,8 +308,7 @@
 										<img src="https://pbs.twimg.com/profile_images/1347312450895572993/ZfHnzfcq_400x400.jpg" style="clip-path: circle(39px at center);width: 75px;">
 									</center>
 									<br>
-									<a href="https://shrinefox.com/">ShrineFox</a> is passionate about customizing games, consoles and devices.
-									<br>This site explores cutting-edge jailbreaking techniques for beginners and end-users.
+									<a href="https://shrinefox.com/">ShrineFox</a> is passionate about customizing games, consoles and devices. This site is a resource for learning the latest techniques.
 								</td>
 								<td style="vertical-align: top;width: 20%;padding-left: 20px;">
 									<br><a href="https://www.youtube.com/c/ShrineFox"><i class="fa fa-youtube" aria-hidden="true"></i> <b>YouTube</b></a>
@@ -287,13 +317,14 @@
 									<br><br><a href="https://github.com/ShrineFox"><i class="fa fa-github" aria-hidden="true"></i> <b>GitHub</b></a>
 									<br><br><a href="https://discord.gg/9USHGmB"><i class="fab fa-discord" aria-hidden="true"></i> <b>Discord</b></a>
 								</td>
-								<td style="vertical-align: top;padding-right: 20px;">
+								<td width="5%"></td>
+								<td>
 									We are NOT affiliated, associated, authorized, endorsed by, or in any way
 									officially connected with ATLUS, SEGA, or any of its subsidiaries or its affiliates.
 									The official ATLUS website can be found at <a href="https://atlus.com/">https://atlus.com</a>. ATLUS and SEGA are
 									registered in the U.S. Patent and Trademark Office. ATLUS and PERSONA are
 									either registered trademarks or trademarks of ATLUS Co., Ltd. or its affiliates.
-									<br><br><a href="https://shrinefox.com/credits"><i class="fa fa-heart" aria-hidden="true"></i> <b>Site Credits</b></a>
+									<br><br><a href="https://shrinefox.com/credits"><i class="fa fa-heart" aria-hidden="true"></i> <b>Site Credits</b></a> | <span id="score">0</span> bubbles popped
 								</td>
 							</tr>
 						</tbody>
