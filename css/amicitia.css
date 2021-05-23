@@ -29,9 +29,48 @@
 }
 
 body, html {
-    margin: 0;
     font-family: 'Open Sans Condensed', sans-serif;
 	color: var(--text);
+	height: 100%;
+    margin: 0;
+	width: 100%;
+	max-width: 100%;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.flex .row {
+  border: 0;
+}
+
+.flex .row.top {
+  flex: 0 1 auto;
+  /* The above is shorthand for:
+  flex-grow: 0,
+  flex-shrink: 1,
+  flex-basis: auto
+  */
+}
+
+.flex .row.middle {
+  flex: 1 1 auto;
+  display: block;
+  background-color: var(--bgblack);
+}
+
+.flex .row.bottom {
+	flex: 0;
+	background-color: var(--bgblack);
+	height: 100%;
 }
 
 table {
@@ -106,13 +145,23 @@ h3 {
 }
 
 /* Page Content */
+.contentwrap {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100%;
+}
 
 .content {
     width: 100%;
     max-width: 100%;
     color: var(--text);
     display: inline-block;
-    background-color: var(--bgblack);
+}
+
+.aftercontent {
+	flex-grow: 1;
+	background-color: var(--bgblack);
 }
 
 .bloglinks {
@@ -482,6 +531,16 @@ input[type=checkbox] {
 }
 
 /* Dropdown */
+select {
+	color: var(--link);
+	background: transparent;
+}
+
+select option {
+	color: var(--link);
+    background: rgba(0, 0, 0, 1);
+}
+
 .headerselect select {
 	appearance:none;
     background-color: transparent;
