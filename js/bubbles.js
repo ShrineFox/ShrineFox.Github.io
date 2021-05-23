@@ -113,7 +113,7 @@ window.onload = function() {
 		setCookie("score", score, 30);
 		document.getElementById('score').innerText = score;
 		var cookie = getCookie("sound");
-		if (sound == 1) {
+		if (sound == "1") {
 			const rndInt = Math.floor(Math.random() * 4) + 1;
 			var audio = new Audio('./wav/pop' + rndInt + '.wav');
 			audio.play();
@@ -214,7 +214,7 @@ function SoundToggle() {
 }
 
 function SetSound() {
-	if ( getCookie("sound") == 1)
+	if ( getCookie("sound") == "1")
 	{
 		document.getElementById("sound").classList.remove('fa-volume-mute');
 		document.getElementById("sound").classList.add('fa-volume-up');
