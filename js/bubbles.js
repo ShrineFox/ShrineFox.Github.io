@@ -112,7 +112,7 @@ window.onload = function() {
 		score++;
 		setCookie("score", score, 30);
 		document.getElementById('score').innerText = score;
-		var cookie = getCookie("sound");
+		var sound = getCookie("sound");
 		if (sound == "1") {
 			const rndInt = Math.floor(Math.random() * 4) + 1;
 			var audio = new Audio('./wav/pop' + rndInt + '.wav');
