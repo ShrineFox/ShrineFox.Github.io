@@ -9,15 +9,15 @@ window.onload = function() {
 	/* Set Performance from Cookie */
 	SetPerformance();
 	
+	/* Set Theme from Cookie or Dropdown */
+	SetTheme();
+	
 	/* Set Bubble Popping Score from Cookie */
 	score = getCookie("score");
 	document.getElementById('score').innerText = score;
 	
 	/* Set Bubble SFX Icon from Cookie*/
 	SetSound();
-	
-	/* Set Theme from Cookie or Dropdown */
-	SetTheme();
 	
 	/* Spawn Bubbles */
 	var c = document.getElementById('bgCanvas'),
@@ -244,10 +244,7 @@ function PerformanceToggle() {
 }
 
 function SetPerformance() {
-	var c = document.getElementById('bgCanvas'),
-		$ = c.getContext('2d'),
-		w = c.width = window.innerWidth,
-		h = c.height = window.innerHeight;
+	var c = document.getElementById('bgCanvas');
 		
 	if ( getCookie("performance") == "1")
 	{
@@ -256,7 +253,7 @@ function SetPerformance() {
 		console.log("Performance: On" );
 		
 		c.setAttribute("style", "display: none;");
-		document.body.setAttribute("style", "background-color: linear-gradient(120deg, var(--link) 0%, var(--blue) 100%);");
+		document.getElementsByTagName("body")[0].setAttribute("style", "background-color: linear-gradient(120deg, var(--link) 0%, var(--blue) 100%);");
 		
 	}
 	else 
@@ -266,7 +263,7 @@ function SetPerformance() {
 		console.log("Performance: Off" );
 		
 		c.setAttribute("style", "display: initial;");
-		document.body.setAttribute("style", "background-color: transparent;");
+		document.getElementsByTagName("body")[0].setAttribute("style", "background-color: transparent;");
 	}
 }
 

@@ -26,6 +26,7 @@
     position: fixed;
     float: top;
     background: linear-gradient(120deg, var(--link) 0%, var(--blue) 100%);
+	display: none; /* Toggled in bubbles.js (performance) */
 }
 
 body, html {
@@ -35,11 +36,11 @@ body, html {
     margin: 0;
 	width: 100%;
 	max-width: 100%;
+	margin: 0;
 }
-html,
-body {
-  height: 100%;
-  margin: 0;
+
+body { /* Toggled in bubbles.js (performance) */
+	background-color: linear-gradient(120deg, var(--link) 0%, var(--blue) 100%);
 }
 
 .flex {
