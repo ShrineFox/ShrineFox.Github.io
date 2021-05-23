@@ -6,12 +6,21 @@ var darkColor = '9,46,109';
 var linkHover = '251,158,59';
 
 window.onload = function() {
+	/* Set Bubble Popping Score from Cookie */
+	score = getCookie("score");
+	document.getElementById('score').innerText = score;
+	
+	/* Set Bubble SFX Icon from Cookie*/
+	SetSound();
+	
+	/* Set Theme from Cookie or Dropdown */
+	Theme();
+	
+	/* Spawn Bubbles */
 	var c = document.getElementById('bgCanvas'),
 		$ = c.getContext('2d'),
 		w = c.width = window.innerWidth,
 		h = c.height = window.innerHeight;
-	
-	Theme();
 
 	var i, bubblesNumber = w * h > 750000 ? 50 : 10,
 	objects = [],
@@ -99,36 +108,41 @@ window.onload = function() {
 		for (var i = 0; i < this.fragments; i++) {
 			world.objects.push(new Fragment(new Vector(this.x, this.y), new Vector(randomInRange(-2, 2), randomInRange(-2, 2)), randomInRange(2, this.radius / 4), this.hue));
 		}
-			objects.push(new Bubble(Math.random() * w, Math.random() * h, -randomInRange(0.5, maxYVelocity), randomInRange(5, maxRadius), randomInRange(1, 10), randomInRange(-40, 40), randomInRange(180, 200)));
-			score++;
-			document.getElementById('score').innerText = score;
+		objects.push(new Bubble(Math.random() * w, Math.random() * h, -randomInRange(0.5, maxYVelocity), randomInRange(5, maxRadius), randomInRange(1, 10), randomInRange(-40, 40), randomInRange(180, 200)));
+		score++;
+		setCookie("score", score, 30);
+		document.getElementById('score').innerText = score;
+		var cookie = getCookie("sound");
+		if (sound == 1) {
 			const rndInt = Math.floor(Math.random() * 4) + 1;
 			var audio = new Audio('./wav/pop' + rndInt + '.wav');
 			audio.play();
-			};
+		}
+		
+	};
 
-			function World(physicalProperties, objects, ctx, background) {
-			this.physicalProperties = physicalProperties;
-			this.objects = objects;
-			this.ctx = ctx;
-			this.background = background;
-			this.frameID = 0;
+	function World(physicalProperties, objects, ctx, background) {
+		this.physicalProperties = physicalProperties;
+		this.objects = objects;
+		this.ctx = ctx;
+		this.background = background;
+		this.frameID = 0;
 	}
 
 	World.prototype.update = function() {
-	for (var i = 0; i < this.objects.length; i++) {
-		this.objects[i].update(this);
-	}
+		for (var i = 0; i < this.objects.length; i++) {
+			this.objects[i].update(this);
+		}
 	};
 
 	World.prototype.render = function() {
 		this.ctx.clearRect(0, 0, this.physicalProperties.width, this.physicalProperties.height);
 		if (this.background) {
 			this.ctx.fillStyle = this.background;
-	}
-	for (var i = 0; i < this.objects.length; i++) {
-		this.objects[i].render(this.ctx);
-	}
+		}
+		for (var i = 0; i < this.objects.length; i++) {
+			this.objects[i].render(this.ctx);
+		}
 	};
 
 	World.prototype.animate = function() {
@@ -177,9 +191,41 @@ window.onload = function() {
 
 function ThemeChanged() {
 	var theme = document.getElementById("theme").value.toLowerCase();
-	setCookie("theme", theme, 30);
+	setCookie("theme", theme, 999);
 	
 	Theme();
+}
+
+function SoundToggle() {
+	if ( document.getElementById("sound").classList.contains('fa-volume-mute') )
+	{
+		document.getElementById("sound").classList.remove('fa-volume-mute');
+		document.getElementById("sound").classList.add('fa-volume-up');
+		setCookie("sound", 1, 999);
+		console.log("Setting sound cookie: 1" );
+	}
+	else 
+	{
+		document.getElementById("sound").classList.remove('fa-volume-up');
+		document.getElementById("sound").classList.add('fa-volume-mute');
+		setCookie("sound", 0, 999);
+		console.log("Setting sound cookie: 0" );
+	}
+}
+
+function SetSound() {
+	if ( getCookie("sound") == 1)
+	{
+		document.getElementById("sound").classList.remove('fa-volume-mute');
+		document.getElementById("sound").classList.add('fa-volume-up');
+		console.log("Setting sound icon: On" );
+	}
+	else 
+	{
+		document.getElementById("sound").classList.remove('fa-volume-up');
+		document.getElementById("sound").classList.add('fa-volume-mute');
+		console.log("Setting sound cookie: Off" );
+	}
 }
 
 function Theme() {
