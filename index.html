@@ -332,17 +332,19 @@
 									The official ATLUS website can be found at <a href="https://atlus.com/">https://atlus.com</a>. ATLUS and SEGA are
 									registered in the U.S. Patent and Trademark Office. ATLUS and PERSONA are
 									either registered trademarks or trademarks of ATLUS Co., Ltd. or its affiliates.
-									<br><br><a href="https://shrinefox.com/credits"><i class="fa fa-heart"></i> <b>Site Credits</b></a> | <span id="score">0</span> bubbles popped |
+									<br><br><a href="https://shrinefox.com/credits"><i class="fa fa-heart"></i> <b>Site Credits</b></a> | <span id="score">0</span> bubbles popped
 									<!--Game Select required for bubbles.js themeing-->
-									<select id="theme" name="theme" onchange="ThemeChanged()">
+									<br>Theme: <select id="theme" name="theme" onchange="ThemeToggle()">
 										<option value="" selected>Default</option>
 										<option value="p5">Red/Black</option>
 										<option value="p4">Yellow/Orange</option>
 										<option value="p3fes">Green/Blue</option>
 										<option value="pq">Pink/Purple</option>
-									</select>
+									</select> | 
 									<!--Bubble Popping SFX Toggle-->
-									<i id="sound" class="fas fa-volume-mute" onclick="SoundToggle()"></i>
+									Sound: <i id="sound" class="fas fa-volume-mute" onclick="SoundToggle()"></i> | 
+									<!--Performance Mode Toggle-->
+									Performance Mode: <i id="performance" class="fas fa-toggle-off" onclick="PerformanceToggle()"></i>
 								</td>
 							</tr>
 						</tbody>

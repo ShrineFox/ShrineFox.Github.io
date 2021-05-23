@@ -6,6 +6,9 @@ var darkColor = '9,46,109';
 var linkHover = '251,158,59';
 
 window.onload = function() {
+	/* Set Performance from Cookie */
+	SetPerformance();
+	
 	/* Set Bubble Popping Score from Cookie */
 	score = getCookie("score");
 	document.getElementById('score').innerText = score;
@@ -14,7 +17,7 @@ window.onload = function() {
 	SetSound();
 	
 	/* Set Theme from Cookie or Dropdown */
-	Theme();
+	SetTheme();
 	
 	/* Spawn Bubbles */
 	var c = document.getElementById('bgCanvas'),
@@ -189,27 +192,20 @@ window.onload = function() {
 
 };
 
-function ThemeChanged() {
-	var theme = document.getElementById("theme").value.toLowerCase();
-	setCookie("theme", theme, 999);
-	
-	Theme();
-}
-
 function SoundToggle() {
 	if ( document.getElementById("sound").classList.contains('fa-volume-mute') )
 	{
 		document.getElementById("sound").classList.remove('fa-volume-mute');
 		document.getElementById("sound").classList.add('fa-volume-up');
 		setCookie("sound", 1, 999);
-		console.log("Setting sound cookie: 1" );
+		console.log("Set Sound: On" );
 	}
 	else 
 	{
 		document.getElementById("sound").classList.remove('fa-volume-up');
 		document.getElementById("sound").classList.add('fa-volume-mute');
 		setCookie("sound", 0, 999);
-		console.log("Setting sound cookie: 0" );
+		console.log("Set Sound: Off" );
 	}
 }
 
@@ -218,22 +214,73 @@ function SetSound() {
 	{
 		document.getElementById("sound").classList.remove('fa-volume-mute');
 		document.getElementById("sound").classList.add('fa-volume-up');
-		console.log("Setting sound icon: On" );
+		console.log("Sound: On" );
 	}
 	else 
 	{
 		document.getElementById("sound").classList.remove('fa-volume-up');
 		document.getElementById("sound").classList.add('fa-volume-mute');
-		console.log("Setting sound cookie: Off" );
+		console.log("Sound: Off" );
 	}
 }
 
-function Theme() {
-	var c = document.getElementById('bgCanvas')
-	var game = document.getElementById("game").value.toLowerCase();
+function PerformanceToggle() {
+	if ( document.getElementById("performance").classList.contains('fa-toggle-off') )
+	{
+		document.getElementById("performance").classList.remove('fa-toggle-off');
+		document.getElementById("performance").classList.add('fa-toggle-on');
+		setCookie("performance", 1, 999);
+		console.log("Set Performance: On" );
+	}
+	else 
+	{
+		document.getElementById("performance").classList.remove('fa-toggle-on');
+		document.getElementById("performance").classList.add('fa-toggle-off');
+		setCookie("performance", 0, 999);
+		console.log("Set Performance: Off" );
+	}
 	
+	SetPerformance();
+}
+
+function SetPerformance() {
+	var c = document.getElementById('bgCanvas'),
+		$ = c.getContext('2d'),
+		w = c.width = window.innerWidth,
+		h = c.height = window.innerHeight;
+		
+	if ( getCookie("performance") == "1")
+	{
+		document.getElementById("performance").classList.remove('fa-toggle-off');
+		document.getElementById("performance").classList.add('fa-toggle-on');
+		console.log("Performance: On" );
+		
+		c.setAttribute("style", "display: none;");
+		document.body.setAttribute("style", "background-color: linear-gradient(120deg, var(--link) 0%, var(--blue) 100%);");
+		
+	}
+	else 
+	{
+		document.getElementById("performance").classList.remove('fa-toggle-on');
+		document.getElementById("performance").classList.add('fa-toggle-off');
+		console.log("Performance: Off" );
+		
+		c.setAttribute("style", "display: initial;");
+		document.body.setAttribute("style", "background-color: transparent;");
+	}
+}
+
+function ThemeToggle() {
+	var theme = document.getElementById("theme").value.toLowerCase();
+	setCookie("theme", theme, 999);
+	
+	SetTheme();
+}
+
+function SetTheme() {
+	var game = document.getElementById("game").value.toLowerCase();
 	var theme = getCookie("theme");
-	console.log("Apply theme from cookie: " + theme );
+	console.log("Theme: " + theme );
 	selectElement("theme", theme);
 
 	if (theme == "") {
