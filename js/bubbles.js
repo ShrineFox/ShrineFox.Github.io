@@ -186,12 +186,14 @@ function Theme() {
 	var cookie = getCookie("theme");
 	console.log("Get Cookie Theme Value: " + cookie );
 	
-	if (cookie == "") {
+	if (cookie == "" && cookie != theme) {
 		setCookie("theme", theme, 30);
 		selectElement("theme", theme);
+		Theme();
 	}
-	else {
+	else if (cookie != theme) {
 		selectElement("theme", cookie);
+		Theme();
 	}
 
 	if (theme == "") {
