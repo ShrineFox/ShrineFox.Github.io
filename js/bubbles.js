@@ -248,22 +248,31 @@ function SetPerformance() {
 		
 	if ( getCookie("performance") == "1")
 	{
+		/* Toggle Icon */
 		document.getElementById("performance").classList.remove('fa-toggle-off');
 		document.getElementById("performance").classList.add('fa-toggle-on');
 		console.log("Performance: On" );
 		
+		/* Toggle Background */
 		c.setAttribute("style", "display: none;");
-		document.getElementsByTagName("body")[0].setAttribute("style", "background-color: linear-gradient(120deg, var(--link) 0%, var(--blue) 100%);");
+		document.getElementsByTagName("body")[0].setAttribute("style", "background: linear-gradient(120deg, var(--link) 0%, var(--blue) 100%);");
 		
+		/* Toggle Wave Animation */
+		document.getElementsByTagName("body")[0].toggleClass('notransition');		
 	}
 	else 
 	{
+		/* Toggle Icon */
 		document.getElementById("performance").classList.remove('fa-toggle-on');
 		document.getElementById("performance").classList.add('fa-toggle-off');
 		console.log("Performance: Off" );
 		
+		/* Toggle Background */
 		c.setAttribute("style", "display: initial;");
-		document.getElementsByTagName("body")[0].setAttribute("style", "background-color: transparent;");
+		document.getElementsByTagName("body")[0].setAttribute("style", "background: transparent;");
+		
+		/* Toggle Wave Animation */
+		document.getElementsByTagName("body")[0].toggleClass('notransition');
 	}
 }
 
