@@ -255,7 +255,7 @@ function SetPerformance() {
 		
 		/* Toggle Background */
 		c.setAttribute("style", "display: none;");
-		document.getElementsByTagName("body")[0].setAttribute("style", "background: linear-gradient(120deg, var(--link) 0%, var(--blue) 100%);");
+		document.getElementsByTagName("body")[0].setAttribute("style", "background: var(--link);");
 		
 		/* Toggle Wave Animation */
 		for(var i = 0; i < 4; i++) {
