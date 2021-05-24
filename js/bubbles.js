@@ -258,7 +258,8 @@ function SetPerformance() {
 		document.getElementsByTagName("body")[0].setAttribute("style", "background: linear-gradient(120deg, var(--link) 0%, var(--blue) 100%);");
 		
 		/* Toggle Wave Animation */
-		document.getElementsByTagName("body")[0].classList.add('noanimation');
+		for(var i = 1; i < 4; i++)
+			document.getElementsByTagName("use")[i].classList.add('noanimation');
 		someElement.offsetHeight; /* Reflow CSS */		
 	}
 	else 
@@ -273,7 +274,8 @@ function SetPerformance() {
 		document.getElementsByTagName("body")[0].setAttribute("style", "background: transparent;");
 		
 		/* Toggle Wave Animation */
-		document.getElementsByTagName("body")[0].classList.remove('noanimation');
+		for(var i = 1; i < 4; i++)
+			document.getElementsByTagName("use")[i].classList.remove('noanimation');
 		someElement.offsetHeight; /* Reflow CSS */
 	}
 }

@@ -756,11 +756,6 @@ a.page-numbers {
 
 /* Wave Animation */
 
-/* kill the transitions on any descendant elements of .parallax (performance) */
-.noanimation {
-  animation: none !important; 
-} 
-
 .parallax > use {
 	animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
 }
@@ -784,6 +779,11 @@ a.page-numbers {
 	animation-delay: -5s;
 	animation-duration: 20s;
 }
+
+/* kill parallax animations (performance) */
+.noanimation {
+	animation: none !important; 
+} 
 
 @keyframes move-forever {
 	0% {
