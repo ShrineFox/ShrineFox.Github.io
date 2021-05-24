@@ -258,9 +258,11 @@ function SetPerformance() {
 		document.getElementsByTagName("body")[0].setAttribute("style", "background: linear-gradient(120deg, var(--link) 0%, var(--blue) 100%);");
 		
 		/* Toggle Wave Animation */
-		for(var i = 1; i < 4; i++)
+		for(var i = 0; i < 4; i++) {
 			document.getElementsByTagName("use")[i].classList.add('noanimation');
-		someElement.offsetHeight; /* Reflow CSS */		
+			document.getElementsByTagName("use")[i].setAttribute("x", 25 * i + i);
+		}
+		c.offsetHeight; /* Reflow CSS */		
 	}
 	else 
 	{
@@ -274,9 +276,11 @@ function SetPerformance() {
 		document.getElementsByTagName("body")[0].setAttribute("style", "background: transparent;");
 		
 		/* Toggle Wave Animation */
-		for(var i = 1; i < 4; i++)
+		for(var i = 0; i < 4; i++) {
 			document.getElementsByTagName("use")[i].classList.remove('noanimation');
-		someElement.offsetHeight; /* Reflow CSS */
+			document.getElementsByTagName("use")[i].setAttribute("x", 48);
+		}
+		c.offsetHeight; /* Reflow CSS */
 	}
 }
 
