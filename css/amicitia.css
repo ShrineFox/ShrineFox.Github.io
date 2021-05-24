@@ -535,6 +535,7 @@ input[type=checkbox] {
 select {
 	color: var(--link);
 	background: transparent;
+	text-align-last:center;
 }
 
 select option {
@@ -756,12 +757,8 @@ a.page-numbers {
 /* Wave Animation */
 
 /* kill the transitions on any descendant elements of .parallax (performance) */
-.parallax * { 
-  -webkit-transition: none !important; 
-  -moz-transition: none !important; 
-  -o-transition: none !important; 
-  -ms-transition: none !important; 
-  transition: none !important; 
+.noanimation {
+  animation: none !important; 
 } 
 
 .parallax > use {
