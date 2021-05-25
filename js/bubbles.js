@@ -343,6 +343,7 @@ function SetTheme() {
 	document.documentElement.style.setProperty('--hover',  hover );
 	document.documentElement.style.setProperty('--text',  text );
 	document.documentElement.style.setProperty('--textinner',  textinner );
+	document.documentElement.style.setProperty('--post',  post );
 }
 
 function getCookie(cname) {
