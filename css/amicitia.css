@@ -4,6 +4,7 @@
 	--text: 255, 255, 255;  /* White, non-content text */
 	--textinner: 20,20,20; /* Black-ish content text */
     --bg: 9,54,109; /* Dark blue, bg/waves */
+	--post: 230, 230, 230; /* Almost White */
     --link: 0,159,255; /* Bright cyan/blue */
     --hover: 251,158,59; /* Bright orange */	
 
@@ -196,7 +197,7 @@ h3 {
 
 #wrap {
     text-align: justify;
-    background: #eee;
+    background: rgba(var(--post), var(--opaque));
     border-radius: var(--radius) var(--radius) 0 0;
     color: rgba(var(--textinner), var(--opaque));
     box-shadow: 0px 6px 1px 0px rgba(var(--bg), var(--opaque));

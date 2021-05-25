@@ -1,9 +1,11 @@
 var canvas = document.getElementById('bgCanvas');
 var score = 0;
-var bubbleColor = '255,255,255';
-var lightColor = '0,159,255';
-var darkColor = '9,46,109';
-var linkHover = '251,158,59';
+var link = '0,159,255';
+var bg = '9,46,109';
+var post = '230,230,230';
+var hover = '251,158,59';
+var text = '255,255,255';
+var textinner = '20,20,20';
 
 window.onload = function() {
 	/* Set Performance from Cookie */
@@ -74,7 +76,7 @@ window.onload = function() {
 
 	Fragment.prototype.render = function($) {
 		$.beginPath();
-		$.fillStyle = 'rgba(' + bubbleColor + ',' + this.opacity + ')';
+		$.fillStyle = 'rgba(' + text + ',' + this.opacity + ')';
 		$.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2);
 		$.fill();
 	};
@@ -101,7 +103,7 @@ window.onload = function() {
 
 	Bubble.prototype.render = function($) {
 		$.beginPath();
-		$.fillStyle = 'rgba(' + bubbleColor + ',' + this.opacity + ')';
+		$.fillStyle = 'rgba(' + text + ',' + this.opacity + ')';
 		$.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
 		$.fill();
 	};
@@ -303,36 +305,44 @@ function SetTheme() {
 
 	if (theme == "") {
 		if (game == "") {
-			lightColor = '0,159,255'; darkColor = '9,46,109'; linkHover = '251,158,59'; }
+			link = '0,159,255'; bg = '9,46,109'; hover = '251,158,59'; post == '10,10,10'; text = '255,255,255'; textinner = '20,20,20'; }
 		if (game == "p5" || game == "p5r" || game == "p5d" || game == "p5s" || game == "smt3") {
-			lightColor = '216,47,47'; darkColor = '0,0,0'; linkHover = '255,255,255'; }
+			link = '190,47,47'; bg = '10,10,10'; hover = '255,0,0'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
 		if (game == "p4" || game == "p4g" || game == "p4d" || game == "p4au") {
-			lightColor = '255,175,57'; darkColor = '89,57,0'; linkHover = '255,255,255'; }
+			link = '255,175,57'; bg = '89,57,0'; hover = '255,216,0'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
 		if (game == "p3fes" || game == "p3p" || game == "p3d") {
-			lightColor = '38,133,191'; darkColor = '10,91,0'; linkHover = '255,255,255'; }
+			link = '0,150,200'; bg = '10,91,0'; hover = '0,211,200'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
 		if (game == "cfb" || game == "pq" || game == "pq2") {
-			lightColor = '255,135,185'; darkColor = '83,9,88'; linkHover = '255,255,255'; }
+			link = '255,135,185'; bg = '83,9,88'; hover = '255,55,155'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
 	}
 	else {
 		if (theme == "p5") {
-			lightColor = '216,47,47'; darkColor = '0,0,0'; linkHover = '255,255,255'; }
+			link = '216,47,47'; bg = '0,0,0'; hover = '255,0,0'; post == '10,10,10'; text = '255,255,255'; textinner = '230,230,230'; }
 		if (theme == "p4") {
-			lightColor = '255,175,57'; darkColor = '89,57,0'; linkHover = '255,255,255'; }
+			link = '255,175,57'; bg = '89,57,0'; hover = '255,216,0'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
 		if (theme == "p3fes") {
-			lightColor = '38,133,191'; darkColor = '10,91,0'; linkHover = '255,255,255'; }
+			link = '0,150,200'; bg = '10,91,0'; hover = '0,211,200'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
 		if (theme == "pq") {
-			lightColor = '255,135,185'; darkColor = '83,9,88'; linkHover = '255,255,255'; }
+			link = '255,135,185'; bg = '83,9,88'; hover = '255,55,155'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
 		if (theme == "custom") {
-			if (getCookie("lightColor") == "") {
-				setCookie("lightColor", "255,255,255", 999); setCookie("darkColor", "0,0,0", 999); setCookie("linkHover", "251,158,59", 999);
+			if (getCookie("link") == "") {
+				setCookie("link", "255,255,255", 999); 
+				setCookie("bg", "0,0,0", 999); 
+				setCookie("hover", "251,158,59", 999);
+				setCookie("post", '230,230,230', 999); 
+				setCookie("text", '255,255,255', 999); 
+				setCookie("textinner", '20,20,20', 999);
 			}
-			lightColor = getCookie("lightColor"); darkColor = getCookie("darkColor"); linkHover = getCookie("linkHover"); 
+			link = getCookie("link"); bg = getCookie("bg"); hover = getCookie("hover"); 
+			post = getCookie('post'); text = getCookie("text"); textinner = getCookie("textinner");
 		}
 	}
 
-	document.documentElement.style.setProperty('--link', lightColor );
-	document.documentElement.style.setProperty('--bg', darkColor );
-	document.documentElement.style.setProperty('--hover',  linkHover );
+	document.documentElement.style.setProperty('--link', link );
+	document.documentElement.style.setProperty('--bg', bg );
+	document.documentElement.style.setProperty('--hover',  hover );
+	document.documentElement.style.setProperty('--text',  text );
+	document.documentElement.style.setProperty('--textinner',  textinner );
 }
 
 function getCookie(cname) {
