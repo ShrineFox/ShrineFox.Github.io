@@ -318,12 +318,14 @@ function SetTheme() {
 			lightColor = '38,133,191'; darkColor = '10,91,0'; linkHover = '255,255,255'; }
 		if (theme == "pq") {
 			lightColor = '255,135,185'; darkColor = '83,9,88'; linkHover = '255,255,255'; }
+		if (theme == "custom") {
+			lightColor = getCookie("lightColor"); darkColor = getCookie("darkColor"); darkColor = getCookie("linkHover"); 
+		}
 	}
 
-	document.documentElement.style.setProperty('--link', 'rgb(' + lightColor + ')');
-	document.documentElement.style.setProperty('--blue', 'rgb(' + darkColor + ')');
-	document.documentElement.style.setProperty('--navbar', 'rgba(' + darkColor + ',' + 0.5 + ')');
-	document.documentElement.style.setProperty('--linkhover', 'rgb(' + linkHover + ')');
+	document.documentElement.style.setProperty('--link', lightColor );
+	document.documentElement.style.setProperty('--bg', darkColor );
+	document.documentElement.style.setProperty('--hover',  linkHover );
 }
 
 function getCookie(cname) {
