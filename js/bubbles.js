@@ -307,7 +307,7 @@ function SetTheme() {
 		if (game == "") {
 			link = '0,159,255'; bg = '9,46,109'; hover = '251,158,59'; post == '10,10,10'; text = '255,255,255'; textinner = '20,20,20'; }
 		if (game == "p5" || game == "p5r" || game == "p5d" || game == "p5s" || game == "smt3") {
-			link = '190,47,47'; bg = '10,10,10'; hover = '255,0,0'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
+			link = '190,47,47'; bg = '10,10,10'; hover = '255,0,0'; post == '20,20,20'; text = '255,255,255'; textinner = '230,230,230'; }
 		if (game == "p4" || game == "p4g" || game == "p4d" || game == "p4au") {
 			link = '255,175,57'; bg = '89,57,0'; hover = '255,216,0'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
 		if (game == "p3fes" || game == "p3p" || game == "p3d") {
@@ -317,7 +317,7 @@ function SetTheme() {
 	}
 	else {
 		if (theme == "p5") {
-			link = '216,47,47'; bg = '0,0,0'; hover = '255,0,0'; post == '10,10,10'; text = '255,255,255'; textinner = '230,230,230'; }
+			link = '190,47,47'; bg = '10,10,10'; hover = '255,0,0'; post == '20,20,20'; text = '255,255,255'; textinner = '230,230,230'; }
 		if (theme == "p4") {
 			link = '255,175,57'; bg = '89,57,0'; hover = '255,216,0'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
 		if (theme == "p3fes") {
