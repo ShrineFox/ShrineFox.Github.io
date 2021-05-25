@@ -320,9 +320,9 @@ function SetTheme() {
 			lightColor = '255,135,185'; darkColor = '83,9,88'; linkHover = '255,255,255'; }
 		if (theme == "custom") {
 			if (getCookie("lightColor") == "") {
-				setCookie("lightColor", "255,255,255", 999); setCookie("darkColor", "0,0,0", 999); setCookie("linkHover", "0,159,255", 999);
+				setCookie("lightColor", "255,255,255", 999); setCookie("darkColor", "0,0,0", 999); setCookie("linkHover", "251,158,59", 999);
 			}
-			lightColor = getCookie("lightColor"); darkColor = getCookie("darkColor"); darkColor = getCookie("linkHover"); 
+			lightColor = getCookie("lightColor"); darkColor = getCookie("darkColor"); linkHover = getCookie("linkHover"); 
 		}
 	}
 
