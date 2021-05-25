@@ -113,7 +113,7 @@ window.onload = function() {
 		}
 		objects.push(new Bubble(Math.random() * w, Math.random() * h, -randomInRange(0.5, maxYVelocity), randomInRange(5, maxRadius), randomInRange(1, 10), randomInRange(-40, 40), randomInRange(180, 200)));
 		score++;
-		setCookie("score", score, 30);
+		setCookie("score", score, 999);
 		document.getElementById('score').innerText = score;
 		var sound = getCookie("sound");
 		if (sound == "1") {
@@ -319,6 +319,9 @@ function SetTheme() {
 		if (theme == "pq") {
 			lightColor = '255,135,185'; darkColor = '83,9,88'; linkHover = '255,255,255'; }
 		if (theme == "custom") {
+			if (getCookie("lightColor") = "") {
+				setCookie("lightColor", "255,255,255", 999); setCookie("darkColor", "0,0,0", 999); setCookie("linkHover", "0,159,255", 999);
+			}
 			lightColor = getCookie("lightColor"); darkColor = getCookie("darkColor"); darkColor = getCookie("linkHover"); 
 		}
 	}
