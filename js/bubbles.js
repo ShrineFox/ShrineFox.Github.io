@@ -121,7 +121,11 @@ window.onload = function() {
 			var audio = new Audio('./wav/pop' + rndInt + '.wav');
 			audio.play();
 		}
-		
+		if (score == 420)
+		{
+			window.open(
+              "https://www.youtube.com/watch?v=SEDpQy5EPR4&list=PLU6By7bu-RSsNY_qWdA0EfpT-_em7u_i9", "_blank");
+		}
 	};
 
 	function World(physicalProperties, objects, ctx, background) {
