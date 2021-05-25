@@ -325,16 +325,16 @@ function SetTheme() {
 		if (theme == "pq") {
 			link = '255,135,185'; bg = '83,9,88'; hover = '255,55,155'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
 		if (theme == "custom") {
-			if (getCookie("link") == "") {
-				setCookie("link", "255,255,255", 999); 
-				setCookie("bg", "0,0,0", 999); 
-				setCookie("hover", "251,158,59", 999);
-				setCookie("post", '230,230,230', 999); 
-				setCookie("text", '255,255,255', 999); 
-				setCookie("textinner", '20,20,20', 999);
+			if (getCookie("color_link") == "") {
+				setCookie("color_link", "255,255,255", 999); 
+				setCookie("color_bg", "0,0,0", 999); 
+				setCookie("color_hover", "251,158,59", 999);
+				setCookie("color_post", '230,230,230', 999); 
+				setCookie("color_text", '255,255,255', 999); 
+				setCookie("color_textinner", '20,20,20', 999);
 			}
-			link = getCookie("link"); bg = getCookie("bg"); hover = getCookie("hover"); 
-			post = getCookie('post'); text = getCookie("text"); textinner = getCookie("textinner");
+			link = getCookie("color_link"); bg = getCookie("color_bg"); hover = getCookie("color_hover"); 
+			post = getCookie('color_post'); text = getCookie("color_text"); textinner = getCookie("color_textinner");
 		}
 	}
 
