@@ -1,10 +1,10 @@
 var canvas = document.getElementById('bgCanvas');
 var score = 0;
 var link = '0,159,255';
-var bg = '9,46,109';
-var post = '230,230,230';
 var hover = '251,158,59';
+var bg = '9,46,109';
 var text = '255,255,255';
+var post = '230,230,230';
 var textinner = '20,20,20';
 
 window.onload = function() {
@@ -120,7 +120,7 @@ window.onload = function() {
 		var sound = getCookie("sound");
 		if (sound == "1") {
 			const rndInt = Math.floor(Math.random() * 4) + 1;
-			var audio = new Audio('./wav/pop' + rndInt + '.wav');
+			var audio = new Audio('https://shrinefox.github.io/wav/pop' + rndInt + '.wav');
 			audio.play();
 		}
 		if (score == 420)
@@ -303,46 +303,81 @@ function SetTheme() {
 	console.log("Theme: " + theme );
 	selectElement("theme", theme);
 
-	if (theme == "") {
-		if (game == "") {
-			link = '0,159,255'; bg = '9,46,109'; hover = '251,158,59'; post == '10,10,10'; text = '255,255,255'; textinner = '20,20,20'; }
-		if (game == "p5" || game == "p5r" || game == "p5d" || game == "p5s" || game == "smt3") {
-			link = '190,47,47'; bg = '10,10,10'; hover = '255,0,0'; post == '20,20,20'; text = '255,255,255'; textinner = '230,230,230'; }
-		if (game == "p4" || game == "p4g" || game == "p4d" || game == "p4au") {
-			link = '255,175,57'; bg = '89,57,0'; hover = '255,216,0'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
-		if (game == "p3fes" || game == "p3p" || game == "p3d") {
-			link = '0,150,200'; bg = '10,91,0'; hover = '0,211,200'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
-		if (game == "cfb" || game == "pq" || game == "pq2") {
-			link = '255,135,185'; bg = '83,9,88'; hover = '255,55,155'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
+	/* Override amicitia.github.io game themeing with selection */
+	if (theme == "") { theme = game; }
+	
+	if (theme == "p5" || theme == "p5r" || theme == "p5d" || theme == "p5s" || theme == "smt3") 
+	{
+		link = '190,47,47';
+		hover = '255,0,0';	
+		bg = '10,10,10';
+		text = '255,255,255';
+		post = '20,20,20';
+		textinner = '230,230,230';
 	}
-	else {
-		if (theme == "p5") {
-			link = '190,47,47'; bg = '10,10,10'; hover = '255,0,0'; post == '20,20,20'; text = '255,255,255'; textinner = '230,230,230'; }
-		if (theme == "p4") {
-			link = '255,175,57'; bg = '89,57,0'; hover = '255,216,0'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
-		if (theme == "p3fes") {
-			link = '0,150,200'; bg = '10,91,0'; hover = '0,211,200'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
-		if (theme == "pq") {
-			link = '255,135,185'; bg = '83,9,88'; hover = '255,55,155'; post == '230,230,230'; text = '255,255,255'; textinner = '20,20,20'; }
-		if (theme == "custom") {
-			if (getCookie("color_link") == "") {
-				setCookie("color_link", "255,255,255", 999); 
-				setCookie("color_bg", "0,0,0", 999); 
-				setCookie("color_hover", "251,158,59", 999);
-				setCookie("color_post", '230,230,230', 999); 
-				setCookie("color_text", '255,255,255', 999); 
-				setCookie("color_textinner", '20,20,20', 999);
-			}
-			link = getCookie("color_link"); bg = getCookie("color_bg"); hover = getCookie("color_hover"); 
-			post = getCookie('color_post'); text = getCookie("color_text"); textinner = getCookie("color_textinner");
+	else if (theme == "p4" || theme == "p4g" || theme == "p4d" || theme == "p4au")
+	{
+		link = '255,175,57';
+		hover = '255,216,0';
+		bg = '89,57,0';
+		text = '255,255,255';
+		post = '230,230,230';
+		textinner = '20,20,20';
+	}
+	else if (theme == "p3fes" || theme == "p3p" || theme == "p3d")
+	{
+		link = '0,150,200';
+		hover = '0,211,200';
+		bg = '10,91,0';
+		text = '255,255,255';
+		post = '230,230,230';
+		textinner = '20,20,20';
+	}
+	else if (theme == "cfb" || theme == "pq" || theme == "pq2")
+	{
+		link = '255,135,185';
+		hover = '255,55,155';
+		bg = '83,9,88';
+		text = '255,255,255';
+		post = '230,230,230';
+		textinner = '20,20,20';
+	}
+	else if (theme == "custom") 
+	{
+		/* Load color values from cookie */
+		if (getCookie("color_link") == "") 
+		{
+			setCookie("color_link", "255,255,255", 999); 
+			setCookie("color_hover", "251,158,59", 999);
+			setCookie("color_bg", "0,0,0", 999); 
+			setCookie("color_text", '255,255,255', 999); 
+			setCookie("color_post", '230,230,230', 999); 
+			setCookie("color_textinner", '20,20,20', 999);
 		}
+		link = getCookie("color_link");
+		hover = getCookie("color_hover");
+		bg = getCookie("color_bg"); 
+		text = getCookie("color_text");
+		post = getCookie('color_post');
+		textinner = getCookie("color_textinner");
+	}
+	else 
+	{
+		/* Default Theme */
+		link = '0,159,255';
+		hover = '251,158,59';
+		bg = '9,46,109';
+		text = '255,255,255';
+		post = '230,230,230';
+		textinner = '20,20,20';
 	}
 
+	/* Override CSS color values */
 	document.documentElement.style.setProperty('--link', link );
 	document.documentElement.style.setProperty('--bg', bg );
 	document.documentElement.style.setProperty('--hover',  hover );
 	document.documentElement.style.setProperty('--text',  text );
-	document.documentElement.style.setProperty('--textinner',  textinner );
+	document.documentElement.style.setProperty('--textinner', textinner );
 	document.documentElement.style.setProperty('--post',  post );
 }
 
