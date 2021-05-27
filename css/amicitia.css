@@ -584,10 +584,11 @@ input[type=checkbox] {
 .copied {
     z-index: 30;
     position: fixed;
-    top: 0;
+    top: var(--space-md);
     background: rgba(var(--bg), var(--opaque));
-    display: none;
     text-align: center;
+    width: 100%;
+	display: none;
 }
 
 /* Dropdown */
