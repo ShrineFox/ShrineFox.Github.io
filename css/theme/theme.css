@@ -1,0 +1,96 @@
+﻿:root {
+    --accent: 0,159,255;
+    --text: 230,230,230;
+    --accenttext: 230,230,230;
+    --bg: 28,30,33;
+    --margin: 2em;
+
+    -moz-transition: all 1.2s ease-in;
+    -o-transition: all 1.2s ease-in;
+    -webkit-transition: all 1.2s ease-in;
+    transition: all 1.2s ease-in;
+}
+
+body {
+    background: rgba(var(--bg), 1.0);
+    color: rgba(var(--text), 1.0);
+
+    -moz-transition: all 1.2s ease-in;
+    -o-transition: all 1.2s ease-in;
+    -webkit-transition: all 1.2s ease-in;
+    transition: all 1.2s ease-in;
+}
+
+footer {
+    padding-top: var(--margin);
+    background: rgba(0,0,0, 0.3);
+}
+
+a {
+    color: rgba(var(--accent), 1.0) !important;
+
+    -moz-transition: all 1.2s ease-in;
+    -o-transition: all 1.2s ease-in;
+    -webkit-transition: all 1.2s ease-in;
+    transition: all 1.2s ease-in;
+}
+
+a:hover, a:active, a.text-dark:focus, a.text-dark:hover {
+    color: rgba(var(--accent), 1.0) !important;
+    text-decoration: underline;
+
+    -moz-transition: all 1.2s ease-in;
+    -o-transition: all 1.2s ease-in;
+    -webkit-transition: all 1.2s ease-in;
+    transition: all 1.2s ease-in;
+}
+
+::selection { /* WebKit/Blink Browsers */
+    background: rgba(var(--accent), 0.5);
+
+    -moz-transition: all 1.2s ease-in;
+    -o-transition: all 1.2s ease-in;
+    -webkit-transition: all 1.2s ease-in;
+    transition: all 1.2s ease-in;
+}
+
+::-moz-selection { /* Gecko Browsers */
+    background: rgba(var(--accent), 0.5);
+
+    -moz-transition: all 1.2s ease-in;
+    -o-transition: all 1.2s ease-in;
+    -webkit-transition: all 1.2s ease-in;
+    transition: all 1.2s ease-in;
+}
+
+.text-dark {
+    color: rgba(var(--text), 1.0);
+}
+
+.text-muted {
+    color: rgba(var(--text), 0.5) !important;
+}
+
+.text-light {
+    color: rgba(var(--accenttext), 1.0) !important;
+}
+
+.form-select {
+    color: rgba(var(--accent), 1.0) !important;
+    background: rgba(var(--bg), 1.0) !important;
+
+    -moz-transition: all 1.2s ease-in;
+    -o-transition: all 1.2s ease-in;
+    -webkit-transition: all 1.2s ease-in;
+    transition: all 1.2s ease-in;
+}
+
+button:focus {
+    outline: 0px;
+}
+
+.card {
+    background: rgba(var(--text), 0.05) !important;
+    margin-bottom: var(--margin);
+    border: none !important;
+}

@@ -1,0 +1,11 @@
+﻿.itemTitle {
+    font-size: 16pt;
+}
+
+span.itemDate {
+    font-weight: bold;
+}
+
+.itemContent {
+    font-weight: initial !important;
+}

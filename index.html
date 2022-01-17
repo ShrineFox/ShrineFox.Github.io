@@ -1,351 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>ShrineFox Test Index</title>
-		<script src="https://shrinefox.com/js/jquery-3.3.1.min.js"></script>
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
-		<script src="https://kit.fontawesome.com/4c3075832a.js" crossorigin="anonymous"></script>
-		<script data-ad-client="ca-pub-9519592525056753" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<link href="https://shrinefox.github.io/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-		<link href="./css/amicitia.css" rel="stylesheet" type="text/css">
-		<script src="./js/bubbles.js"></script>
-		<script src="https://shrinefox.github.io/js/clipboard.js"></script>
-		<script src="https://shrinefox.github.io/js/showhide.js"></script>
-		<script src="https://shrinefox.github.io/js/hidenav.js"></script>
-		<script src="https://shrinefox.github.io/js/navigation.js"></script>
-	</head>
-	<body>
-		<div class="flex">
-			<!--TopRow-->
-			<div class="row top">
-				<!--Navbar-->
-				<div class="navbar">
-					<div class="navbar-container">
-						<table>
-							<tr>
-								<td>
-									<a href="https://amicitia.github.io">
-										<div class="navbar-item">
-											<div class="amicitia-logo">
-												<div class="amicitia-svg"></div>
-											</div>Mods
-										</div>
-									</a>
-									<!--Top Navbar-->
-									<a href="https://shrinefox.com/news">
-										<div class="navbar-item">
-											<span><i class="fa fa-newspaper"></i>&nbsp;News</span>
-										</div>
-									</a>
-									<a href="https://shrinefox.com/guides">
-										<div class="navbar-item">
-											<span><i class="fa fa-graduation-cap"></i>&nbsp;Guides</span>
-										</div>
-									</a>
-									<a href="https://shrinefox.com/blog">
-										<div class="navbar-item">
-											<span><i class="fab fa-wordpress"></i>&nbsp;Blog</span>
-										</div>
-									</a>
-								</td>
-								<td id="sidebartoggle">
-									<label for="openSidebarMenu" class="sidebarIconToggle">
-										<div class="spinner diagonal part-1"></div>
-										<div class="spinner horizontal"></div>
-										<div class="spinner diagonal part-2"></div>
-									</label>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-				<!--Sidebar Toggle-->
-				<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" style="position: fixed;display:none;">
-				<aside class="sidebar">
-					<div class="component">
-						<div class="contents">
-							<ul class="items list">
-								<!--Sidebar Items-->
-								<div class="sidebarheader">
-									<h4><i class="fa fa-users"></i> &nbsp;&nbsp;Forum</h4>
-								</div>
-								<a href="https://shrinefox.com/forum/ucp.php">
-									<div class="item">
-										<i class="fa fa-address-card"></i> &nbsp;Account Settings
-									</div>
-								</a>
-								<a href="https://shrinefox.com/forum/ucp.php?i=pm&folder=inbox">
-									<div class="item">
-										<i class="fa fa-envelope"></i> &nbsp;Inbox
-									</div>
-								</a>
-								<a href="https://shrinefox.com/forum/search.php">
-									<div class="item">
-										<i class="fa fa-search"></i> &nbsp;Search
-									</div>
-								</a>
-								<a href="https://shrinefox.com/forum/search.php?search_id=egosearch">
-									<div class="item">
-										<i class="fa fa-sticky-note"></i> &nbsp;Your Posts
-									</div>
-								</a>
-								<a href="https://shrinefox.com/forum/search.php?search_id=active_topics">
-									<div class="item">
-										<i class="fa fa-star"></i> &nbsp;Active Threads
-									</div>
-								</a>
-								<div class="sidebarheader">
-									<h4><i class="fa fa-cube"></i> &nbsp;&nbsp;Resources</h4>
-								</div>
-								<a href="https://amicitia.miraheze.org/wiki/Main_Page">
-									<div class="item">
-										<i class="fa fa-book"></i> &nbsp;Wiki
-									</div>
-								</a>
-								<a href="https://shrinefox.com/forum/app.php/faqpage">
-									<div class="item">
-										<i class="fa fa-question-circle"></i> &nbsp;FAQs
-									</div>
-								</a>
-								<div class="sidebarheader">
-									<h4><i class="fa fa-terminal"></i>&nbsp;&nbsp;Apps</h4>
-								</div>
-								<a href="https://shrinefox.com/PatchCreator">
-									<div class="item">
-										<i class="fa fa-check-square"></i> &nbsp;P5 RPCS3 Patch.yml Creator
-									</div>
-								</a>
-								<a href="https://shrinefox.com/textsearch">
-									<div class="item">
-										<i class="fab fa-searchengin"></i> &nbsp;Dialog Search
-									</div>
-								</a>
-								<a href="https://amicitia.github.io/files">
-									<div class="item">
-										<i class="fa fa-folder-open"></i> &nbsp;Dumps
-									</div>
-								</a>
-								<a href="https://amicitia.github.io/docs/flowscript">
-									<div class="item">
-										<i class="fa fa-file-code"></i> &nbsp;Flowscript Docs
-									</div>
-								</a>
-							</ul>
-						</div> <!--End Contents-->
-					</div>  <!--End Component-->
-				</aside>  <!--End Sidebar Menu-->
-				<!--Header-->
-				<div class="header">
-					<canvas id="bgCanvas" width="715" height="722" style=""></canvas>
-					<div class="header-inner" style="margin-top: 150px;">
-						<center>
-							<!--Title-->
-							<div class="headerselect">
-								<!--Game Select required for bubbles.js themeing-->
-								<select id="game" name="game" onchange="SetTheme()">
-									<option value="" selected>Default</option>
-									<option value="P5">Red/Black</option>
-									<option value="P4">Yellow/Orange</option>
-									<option value="P3FES">Green/Blue</option>
-									<option value="PQ">Pink/Purple</option>
-								</select>
-							</div>
-							<!--Subtitle-->
-							<br>
-							<div class="subheaderselect">
-								<!--Select serving as website navigation-->
-								<select onchange="if (this.value) window.location.href=this.value">
-									<option value="https://shrinefox.github.io/" selected>shrinefox.github.io</option>
-									<option value="https://amicitia.github.io/">amicitia.github.io</option>
-									<option value="https://shrinefox.com/">ShrineFox.com</option>
-								</select>
-							</div>
-							<!--Game-->
-						</center>
-						<!--Waves-->
-						<div>
-							<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-								<defs>
-									<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
-								</defs>
-								<g class="parallax">
-									<use xlink:href="#gentle-wave" x="48" y="0"></use>
-									<use xlink:href="#gentle-wave" x="48" y="3"></use>
-									<use xlink:href="#gentle-wave" x="48" y="5"></use>
-									<use xlink:href="#gentle-wave" x="48" y="7"></use>
-								</g>
-							</svg>
-						</div>
-						<!--Waves End-->
-					</div>
-					<!--Header End-->
-				</div>
-			</div>
-			<!--Middle-->
-			<div class="row middle">
-				<!--Page Body-->
-				<div class="content">
-					<table>
-							<!--Sidebar-->
-							<tr>
-								<td style="vertical-align:top;">
-									<div class="bloglinks">
-										<div class="blogtype">
-											<table>
-												<tr>
-													<td>
-														<a href="https://shrinefox.com/news/">
-															<h4>
-																<i class="fas fa-newspaper"></i> News
-															</h4>
-														</a>
-													</td>
-													<td class="blogdate">
-														Dec 20
-													</td>
-												</tr>
-											</table>
-										</div>
-										<div class="blogdivider"></div>
-										<h4 style="margin-left: 10px;">
-											<a href="https://amicitia-team.tumblr.com/post/638012597777629184">Modding Support for P5R USA!</a>
-										</h4>
-										<br>
-										<div class="blogtype">
-											<table>
-												<tr>
-													<td>
-														<a href="https://shrinefox.com/guides/">
-															<h4>
-																<i class="fas fa-graduation-cap"></i> Guides
-															</h4>
-														</a>
-													</td>
-													<td class="blogdate">
-														Jan 21
-													</td>
-												</tr>
-											</table>
-										</div>
-										<div class="blogdivider"></div>
-										<h4 style="margin-left: 10px;">
-											<a href="https://shrinefox.com/guides/2020/09/30/modding-persona-5-royal-jp-on-ps4-fw-6-72/">Modding P5R USA on PS4 FW 5.05 - 6.72</a>
-										</h4>
-									</div>
-								</td>
-								<td style="width: 80%">
-									<div class="wrap">
-										<!--Main Page Content-->
-										<table id="wrap">
-											<tr>
-												<td style="width: 100%;">
-													<div style="text-align: justify;">
-														<center>
-															<h1>Welcome to the new ShrineFox.com!</h1>
-														</center>
-														<br>
-														<p>
-															I created this site to serve the <span class="highlight">Amicitia modding community</span>. As I learned about web development, it has gone through many appearance changes. Today I'm proud enough to call it complete. Please look around, learn new things and make friends!
-														</p>
-														<center>
-															<h2><u>Categories</u></h2>
-														</center>
-														<p>
-															<b><a href="https://amicitia.github.io">Mods</a></b>: Browse the internet's largest collection of <span class="highlight">SMT mods, tools, guides & cheats</span>. Many were sourced from Gamebanana.com, others were submitted via the forum.
-															<br><br>
-															<b><a href="https://shrinefox.com/news">News</a></b>: Inform yourself with <span class="highlight">newsletter articles about Amicitia's modding</span> breakthroughs, discoveries, and major releases are published here.
-															<br><br>
-															<b><a href="https://shrinefox.com/guides">Guides</a></b>: Explore <span class="highlight">step-by-step modding tutorials</span>. These are accompanied by instructional videos and links to resources.
-															<br><br>
-															<b><a href="https://shrinefox.com/blog">Blog</a></b>: Catch up with <span class="highlight2">my personal blog</span> about other things I'm working on. I'm a self-taught programmer who enjoys automating tedious tasks or jailbreaking systems. Persona isn't the only series I make content for. The blog will likely also cover BotW, ACNH, EarthBound, Pikmin, TTYD, Smash and sometimes Sonic.
-															<br>
-														</p>
-														<center>
-															<h2><u>Community</u></h2>
-														</center>
-														<p>
-															<b><a href="https://amicitia.miraheze.org/wiki/Main_Page">Wiki</a></b>: Help build the <span class="highlight">modding knowledgebase</span>.
-															<br>Everything we know about files, formats and tools should go here.
-															<br><br>
-															<b><a href="https://shrinefox.com/forum">Forum</a></b> & <b><a href="https://reddit.com/r/Amicitia">Subreddit</a></b>: Search and submit <span class="highlight">modding questions and answers</span>. There's also a handy <a href="https://shrinefox.com/forum/app.php/faqpage">Frequently Asked Questions</a> page.
-															<br><br>
-															<b><a href="https://discord.gg/9USHGmB">Discord</a></b>: Need to speak directly? <span class="highlight">Chat with other modders</span> in the community.
-															<br><b>Please Note:</b> This is a public Discord server that is <span class="highlight2">not operated by or associated with me</span>.
-														</p>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-										</table> 
-									</div> 
-								</td>
-							</tr>
-						</table>
-					</div>
-			</div>
-			<!--Footer-->
-			<div class="row bottom">
-				<footer>
-					<table style="padding-right: 2%;">
-						<tbody>
-							<tr>
-								<td style="vertical-align: top;width: 25%;">
-									<center>
-										<img src="https://pbs.twimg.com/profile_images/1347312450895572993/ZfHnzfcq_400x400.jpg" style="clip-path: circle(39px at center);width: 75px;">
-									</center>
-									<br>
-									<a href="https://shrinefox.com/">ShrineFox</a> is passionate about customizing games, consoles and devices. This site is a resource for learning the latest available techniques.
-									<br><br><a href="https://shrinefox.com/credits"><i class="fa fa-heart"></i> <b>Site Credits</b></a>
-									<br><span id="score">0</span> bubbles popped
-								</td>
-								<td style="vertical-align: top;width: 20%;padding-left: 20px;">
-									<br><a href="https://www.youtube.com/c/ShrineFox"><i class="fa fa-youtube"></i> <b>YouTube</b></a>
-									<br><br><a href="https://twitter.com/ShrineFoxMods"><i class="fa fa-twitter"></i> <b>ShrineFox</b></a>
-									<br><br><a href="https://twitter.com/AmicitiaTeam"><i class="fa fa-twitter"></i> <b>AmicitiaTeam</b></a>
-									<br><br><a href="https://reddit.com/r/Amicitia"><i class="fa fa-reddit"></i> <b>Reddit</b></a>
-									<br><br><a href="https://discord.gg/9USHGmB"><i class="fab fa-discord"></i> <b>Discord</b></a>
-								</td>
-								<td width="5%"></td>
-								<td>
-									We are NOT affiliated, associated, authorized, endorsed by, or in any way
-									officially connected with ATLUS, SEGA, or any of its subsidiaries or its affiliates.
-									The official ATLUS website can be found at <a href="https://atlus.com/">https://atlus.com</a>. ATLUS and SEGA are
-									registered in the U.S. Patent and Trademark Office. ATLUS and PERSONA are
-									either registered trademarks or trademarks of ATLUS Co., Ltd. or its affiliates.
-									<br>
-									<!--Game Select required for bubbles.js themeing-->
-									<br>Theme: <select id="theme" name="theme" onchange="ThemeToggle()">
-										<option value="" selected>Default</option>
-										<option value="p5">Red/Black</option>
-										<option value="p4">Yellow/Orange</option>
-										<option value="p3fes">Green/Blue</option>
-										<option value="pq">Pink/Purple</option>
-										<option value="custom">Custom</option>
-									</select>
-									<!--Bubble Popping SFX Toggle-->
-									<br>Sound: <i id="sound" class="fas fa-volume-mute" onclick="SoundToggle()"></i>									
-									<!--Performance Mode Toggle-->
-									<br>Performance Mode: <i id="performance" class="fas fa-toggle-off" onclick="PerformanceToggle()"></i>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<br>
-					<center>
-						<!--AdSense-->
-						<br>
-						<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-						<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-hx+4+s-4m+70" data-ad-client="ca-pub-9519592525056753" data-ad-slot="8263745709"></ins>
-						<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-						<br>
-						<!--Credits-->
-						<br>© ShrineFox 2020 - 2021. <a href="https://ko-fi.com/shrinefox"><i class="fa fa-coffee"></i> Support</a>
-						<br><br>
-					</center>
-					<!--End Footer-->
-				</footer>
-			</div>
-			<!--End Bottom-->
-		</div>
-	</body>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index - ShrineFox.com</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/spectre.min.css" />
+    <link rel="stylesheet" href="./css/spectre-icons.min.css" />
+    <link rel="stylesheet" href="./css/ytv.css" />
+    <link rel="stylesheet" href="./css/theme/theme.css" />
+    <link rel="stylesheet" href="./css/theme/scrollbar.css" />
+    <link rel="stylesheet" href="./css/theme/header.css" />
+    <link rel="stylesheet" href="./css/theme/google.css" />
+    <link rel="stylesheet" href="./css/theme/feedek.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="./js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="./js/jscolor.js" type="text/javascript"></script>
+    <script src="./js/theme.js" type="text/javascript"></script>
+    <script src="./js/ytv.js" type="text/javascript"></script>
+    <script src="./js/FeedEk.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
+            <div class="container accent">
+                <a class="navbar-brand" asp-area="" href="./Index">
+                    <!--Logo-->
+                    <svg version="1.0" class="amicitialogo" xmlns="http://www.w3.org/2000/svg"
+                         width="500.000000pt" height="500.000000pt" viewBox="0 0 500.000000 500.000000"
+                         preserveAspectRatio="xMidYMid meet">
+                        <metadata>
+                        </metadata>
+                        <g transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)"
+                           fill="#ffffff" stroke="none">
+                            <path d="M2256 4489 c-926 -119 -1651 -850 -1766 -1779 -15 -125 -12 -405 5
+                                            -529 65 -450 258 -836 579 -1157 67 -66 164 -152 216 -191 136 -100 310 -203
+                                            343 -203 14 0 48 114 141 481 l43 166 -143 246 c-78 136 -141 247 -139 247 15
+                                            0 424 113 442 122 12 6 20 14 18 18 -2 4 30 132 71 286 41 153 120 445 174
+                                            647 l99 369 -143 246 c-121 208 -141 248 -126 254 9 3 113 32 232 63 210 56
+                                            215 58 215 84 1 14 37 160 82 324 44 165 78 303 75 308 -7 11 -325 9 -418 -2z" />
+                            <path d="M3135 3840 c-4 -16 -4 -34 -1 -39 3 -4 -39 -249 -94 -542 -55 -294
+                                            -100 -546 -100 -561 l0 -28 210 0 210 0 0 28 c0 15 -45 267 -100 561 -55 293
+                                            -97 538 -94 542 8 13 -6 69 -16 69 -5 0 -11 -13 -15 -30z" />
+                            <path d="M2806 2008 c-180 -966 -256 -1368 -261 -1390 l-7 -28 606 0 606 0 0
+                                            23 c0 13 -56 324 -125 693 -69 368 -128 684 -131 702 l-6 32 -338 0 -338 0 -6
+                                            -32z" />
+                        </g>
+                    </svg>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" href="./Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" href="./Browse">Browse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" href="./Apps">Apps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" href="./Forum">Forum</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" href="./Wiki">Wiki</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" href="./Forum/app.php/faqpage">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" href="./Articles">Articles</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Video Background-->
+    <div class="videocontainer">
+        <video autoplay muted loop class="videobg">
+            <source src="./images/waves.mp4" type="video/mp4">
+        </video>
+        <!--Search-->
+        <div class="googlesearch">
+            <script async src="https://cse.google.com/cse.js?cx=38ad766f435ddfed4"></script>
+            <div class="gcse-search"></div>
+        </div>
+    </div>
+    <!-- Page Content -->
+    <div class="container">
+        <main role="main" class="pb-3">
+
+<div class="text-center">
+    <br>
+    <h1 class="display-4">Welcome</h1>
+    <p>
+        You've reached the internet's largest collection of <a asp-area="" href="\./Browse">SMT mods, tools & guides</a>.
+        <br>This is also where I write about ways you can personalize your games and consoles using open source software.
+    </p>
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="columns">
+        <!--News-->
+        <div class="column col-4 col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title h5"><a href="https://shrinefox.com/news/"><i class="fas fa-newspaper"></i> News</a></div>
+                </div>
+                <div class="card-footer">
+                    <div id="news-latest"></div>
+                </div>
+            </div>
+        </div>
+        <!--Guides-->
+        <div class="column col-4 col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title h5"><a href="https://shrinefox.com/guides/"><i class="fas fa-graduation-cap"></i> Guides</a></div>
+                </div>
+                <div class="card-footer">
+                    <div id="guides-latest"></div>
+                </div>
+            </div>
+        </div>
+        <!--Blog-->
+        <div class="column col-4 col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title h5"><a href="https://shrinefox.com/blog/"><i class="fab fa-wordpress"></i> Blog</a></div>
+                </div>
+                <div class="card-footer">
+                    <div id="blog-latest"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div style="margin-left: auto;margin-right:auto;max-width:800px;">
+    <div id="YourPlayerID" style="height: 100%;"></div>
+</div>
+<script src="https://apis.google.com/js/platform.js"></script>
+<br>
+<br>
+<script>
+    $('#news-latest').FeedEk({
+        FeedUrl: 'https://shrinefox.com/news/feed',
+        MaxCount: 1,
+        ShowDesc: true,
+        ShowPubDate: true,
+        DescCharacterLimit: 0,
+        TitleLinkTarget: '_blank',
+        DateFormat: 'MMM d',
+        DateFormatLang: 'en'
+    });
+    $('#guides-latest').FeedEk({
+        FeedUrl: 'https://shrinefox.com/guides/feed',
+        MaxCount: 1,
+        ShowDesc: true,
+        ShowPubDate: true,
+        DescCharacterLimit: 0,
+        TitleLinkTarget: '_blank',
+        DateFormat: 'MMM d',
+        DateFormatLang: 'en'
+    });
+    $('#blog-latest').FeedEk({
+        FeedUrl: 'https://shrinefox.com/blog/feed',
+        MaxCount: 1,
+        ShowDesc: true,
+        ShowPubDate: true,
+        DescCharacterLimit: 0,
+        TitleLinkTarget: '_blank',
+        DateFormat: 'MMM d',
+        DateFormatLang: 'en'
+    });
+</script>
+    </main>
+</div>
+<!-- Footer -->
+<br>
+<br>
+<footer class="footer text-muted">
+    <div class="container">
+        <div class="columns">
+            <div class="column col-6">
+                &copy; ShrineFox 2020 - 2021 <span class="g-ytsubscribe" data-channel="ShrineFox" data-layout="default" data-count="default"></span>
+                <script>
+                        document.addEventListener("DOMContentLoaded", function (event) {
+                            var controller = new YTV('YourPlayerID', {
+                                channelId: 'UCrB3t1zAQPwAeWtI8RZIOvQ',
+                                playlist: 'PLU6By7bu-RSsXcvqRkDdh3R4OGva8_No4',
+                                responsive: true
+                            });
+                        });
+                </script>
+                <br><a href="https://ko-fi.com/shrinefox"><i class="fa fa-coffee"></i> Support</a> | <a href="https://bit.ly/shrinefox">Track Progress</a> |
+                <a asp-area="" href="\./Privacy">Privacy</a> | <a asp-area="" href="\./Disclaimer">Disclaimer</a>
+            </div>
+            <div class="column col-6 form-group">
+                <!--Theme Select-->
+                <select id="color" name="color" class="form-select" onchange="ColorSelect()">
+                    <option value="">Select a Theme</option>
+                    <option value="Red">Red</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Green">Green</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Violet">Violet</option>
+                    <option value="Gamer">Gamer</option>
+                    <option value="Custom">Custom</option>
+                </select>
+                <!--Color Picker-->
+                <script>
+                        jscolor.presets.default = {
+                            format: 'rgb', previewSize: 20, paletteCols: 1,
+                            backgroundColor: 'rgb(var(--bg))', borderColor: 'rgb(var(--bg))',
+                            padding: 5, width: 100, height: 100, mode: 'HVS',
+                            controlBorderColor: 'rgb(var(--bg))', sliderSize: 8, shadow: false
+                        };
+                </script>
+                <span class="column col-6 form-group">
+                    <label class="form-switch">
+                        <input type="checkbox" id="darkToggle" onclick="DarkModeSelect()">
+                        <i class="form-icon"></i> Dark Mode
+                    </label>
+                </span>
+                <span class="column col-6 form-group" id="colorpicker" style="display:none;">
+                    <button id="customaccent" data-jscolor="{onChange: 'updateAccent(this)',value:'rgb(var(--accent))', alpha:1}">Accent</button>
+                </span>
+            </div>
+        </div>
+        <div class="ad">
+            <!--AdSense-->
+            <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-hx+4+s-4m+70" data-ad-client="ca-pub-9519592525056753" data-ad-slot="8263745709"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </div>
+</footer>
+
+<script src="./lib/jquery/dist/jquery.min.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+</body>
 </html>
