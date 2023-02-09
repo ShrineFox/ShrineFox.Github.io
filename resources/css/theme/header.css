@@ -1,0 +1,151 @@
+﻿/* Navbar */
+
+.border-bottom {
+    border-bottom: 2px solid rgba(var(--accent), 1.0) !important;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(var(--text), 1.0) !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(var(--accent), 1.0) !important;
+    text-decoration: none;
+}
+
+.accent svg path, i.fas:before, i.fab:before {
+    fill: rgba(var(--accent), 1.0) !important;
+    color: rgba(var(--accent), 1.0) !important;
+}
+
+.accent svg {
+    width: 50px;
+    height: 50px;
+}
+
+.mb-3, .my-3 {
+    margin-bottom: 0 !important;
+}
+
+.form-checkbox, .form-radio, .form-switch { 
+    display: initial !important;
+}
+
+.dropmenu ul ul {
+    background: rgba(var(--bg), 1) !important;
+    z-index: 999;
+}
+
+.dropmenu ul {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    white-space: nowrap
+}
+
+.dropmenu ul li {
+    position: relative;
+    margin: 0
+}
+
+.dropmenu ul li a {
+    display: block;
+    padding: 7px 30px 7px 20px;
+    text-decoration: none
+}
+
+.dropmenu ul li a.active, .dropmenu ul li a:focus, .dropmenu ul li a:hover {
+    color: rgba(var(--accent), 1) !important;
+    transition: 0.25s;
+}
+
+.dropmenu ul li a:before {
+    content: '\f105';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    display: inline-block;
+    float: right;
+    margin-right: -20px;
+    content: '\f107';
+    vertical-align: middle;
+}
+
+.dropmenu ul li a:only-child {
+    padding-right: 20px;
+}
+
+.dropmenu ul li a:only-child:before {
+    content: ''
+}
+
+.dropmenu ul li:hover > ul {
+    display: block;
+    visibility: visible;
+}
+
+.dropmenu ul ul li a:before {
+    content: '\f105';
+    background: rgba(var(--bg),1);
+    margin: 0;
+    padding-left: 58px;
+}
+
+.dropmenu ul ul {
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    list-style: none;
+    background: #fff;
+    box-shadow: 0 3px 5px rgba(0,0,0,.1);
+}
+
+.dropmenu ul ul ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+.dropmenu > ul > li {
+    display: inline-block;
+}
+
+.dropmenu.animated ul li {
+    transition: background .7s,color .5s;
+}
+
+.dropmenu.animated ul li:hover > ul {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.dropmenu.animated ul ul {
+    transition: transform .3s,opacity .5s;
+    transform: translateY(-10px);
+    opacity: 0;
+    z-index: 999;
+}
+
+.dropmenu span.itemDate {
+    margin-left: 20px;
+}
+
+.navbar .itemTitle a {
+    font-size: 12pt !important;
+}
+
+/* Header */
+
+.videocontainer {
+    background: rgba(var(--accent), 1);
+    width: 100% !important;
+    height: 150px;
+}
+
+.videobg {
+    z-index: -1;
+    mix-blend-mode: hard-light;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}

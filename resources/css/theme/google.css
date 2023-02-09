@@ -1,0 +1,91 @@
+﻿#adBlock, .gsc-adBlock {
+    display: none !important;
+}
+
+.googlesearchcontainer {
+    background: #000;
+    position: relative;
+}
+
+.ytv-canvas ::-webkit-scrollbar-thumb {
+    background: rgba(var(--accent),1) !important;
+}
+
+.googlesearch {
+    background: rgba(var(--accent), 0.8) !important;
+}
+
+.search {
+    z-index: 0;
+    top: 0;
+    padding-top: 5em;
+    position: relative;
+}
+
+.cse .gsc-control-cse, .gsc-control-cse,
+.gsc-webResult.gsc-result, .gsc-results .gsc-imageResult,
+.gsc-results .gsc-cursor-box .gsc-cursor-page,
+.gsc-result-info, .gsc-orderby-label,
+.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet, .gs-fileFormatType,
+.gs-webResult div.gs-visibleUrl, .gs-webResult .gs-visibleUrl, .gs-promotion .gs-visibleUrl, .gs-webResult .gs-visibleUrl,
+.gs-spelling, .gs-result .gs-title *, .gsc-cursor-page, .gs-spelling a,
+.gsc-input-box, input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gsc-input input,
+.gsst_a .gscb_a, .gsc-completion-container, .gs-result .gs-title, .gs-result .gs-title * {
+    border-color: transparent !important;
+    background-color: transparent !important;
+    color: rgba(var(--accenttext), 1.0) !important;
+}
+
+.gsst_a:hover .gscb_a, .gsst_a:focus .gscb_a {
+    color: rgba(var(--accent), 1) !important;
+}
+
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+    width: 100% !important;
+}
+
+.gcsc-more-maybe-branding-root {
+    display: none !important;
+}
+
+.gsc-control-cse {
+    padding: 0 !important;
+}
+
+.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus {
+    border-color: rgba(var(--text),0) !important;
+    background-color: rgba(var(--accenttext),1) !important;
+    border: 0px solid rgba(var(--text),1) !important;
+}
+
+.gs-result .gs-image, .gs-result .gs-promotion-image {
+    border: transparent !important;
+    width: 80% !important;
+}
+
+.gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b,
+.gs-result .gs-title *, .gsc-cursor-page, .gs-spelling a {
+    font-weight: bold;
+}
+
+.gsc-completion-container {
+    background-color: rgba(var(--accent),1) !important;
+}
+
+.gsc-completion-selected {
+    background-color: rgba(var(--accent),1) !important;
+}
+
+#___gcse_0 {
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.gsc-completion-container span {
+    color: rgba(var(--accenttext), 1.0) !important;
+}
+
+.gssb_e {
+    background: rgba(var(--accent), 1);
+    -webkit-filter: brightness(79%);
+}

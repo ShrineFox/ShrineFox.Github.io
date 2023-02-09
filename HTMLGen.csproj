@@ -55,29 +55,33 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\spectre-icons.min.css" />
-    <Content Include="css\spectre.min.css" />
-    <Content Include="css\theme\feedek.css" />
-    <Content Include="css\theme\google.css" />
-    <Content Include="css\theme\header.css" />
-    <Content Include="css\theme\scrollbar.css" />
-    <Content Include="css\theme\theme.css" />
-    <Content Include="css\ytv.css" />
-    <Content Include="Pages\index.html" />
-    <Content Include="Pages\Shared\html\body.html" />
-    <Content Include="Pages\Shared\html\footer.html" />
-    <Content Include="Pages\Shared\html\head.html" />
-    <Content Include="images\logo.svg" />
-    <Content Include="images\waves.mp4" />
-    <Content Include="index.html" />
-    <Content Include="js\FeedEk.min.js" />
-    <Content Include="js\jquery-3.3.1.min.js" />
-    <Content Include="js\jscolor.js" />
-    <Content Include="js\theme.js" />
-    <Content Include="js\ytv.js" />
-    <Content Include="lib\bootstrap\dist\css\bootstrap.css" />
-    <Content Include="lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
-    <Content Include="lib\jquery\dist\jquery.min.js" />
+    <Content Include="resources\css\bootstrap.min.css" />
+    <Content Include="resources\css\spectre-icons.css" />
+    <Content Include="resources\css\spectre.css" />
+    <Content Include="resources\css\theme\feedek.css" />
+    <Content Include="resources\css\theme\google.css" />
+    <Content Include="resources\css\theme\header.css" />
+    <Content Include="resources\css\theme\notice.css" />
+    <Content Include="resources\css\theme\scrollbar.css" />
+    <Content Include="resources\css\theme\sidebar.css" />
+    <Content Include="resources\css\theme\tags.css" />
+    <Content Include="resources\css\theme\theme.css" />
+    <Content Include="resources\css\ytv.css" />
+    <Content Include="resources\html\body.html" />
+    <Content Include="resources\html\card.html" />
+    <Content Include="resources\html\footer.html" />
+    <Content Include="resources\html\head.html" />
+    <Content Include="resources\html\pages\default.html" />
+    <Content Include="resources\html\pagination.html" />
+    <Content Include="resources\html\post.html" />
+    <Content Include="resources\images\logo.svg" />
+    <Content Include="resources\js\bootstrap.bundle.min.js" />
+    <Content Include="resources\js\FeedEk.min.js" />
+    <Content Include="resources\js\jquery.min.js" />
+    <Content Include="resources\js\jscolor.js" />
+    <Content Include="resources\js\sidebar.js" />
+    <Content Include="resources\js\theme.js" />
+    <Content Include="resources\js\ytv.js" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources.resx">

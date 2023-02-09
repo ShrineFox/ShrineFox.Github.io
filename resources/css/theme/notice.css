@@ -1,0 +1,24 @@
+﻿.notice {
+    background: rgba(var(--accent), 0.15);
+    border-color: rgba(var(--accent), 1.0) !important;
+    margin: var(--margin);
+    overflow: hidden;
+    padding: 1em;
+    border-left: 6px solid;
+}
+
+.notice.red {
+    border-color: rgba(169,71,71,1) !important;
+}
+
+.notice.yellow {
+    border-color: rgba(191,175,80,1) !important;
+}
+
+.notice.blue {
+    border-color: rgba(92,149,199,1) !important;
+}
+
+.notice.green {
+    border-color: rgba(68,163,69) !important;
+}

@@ -1,0 +1,36 @@
+.tags {
+    padding: 1px;
+    overflow: hidden;
+    word-wrap: break-word;
+    height: 100%;
+    background: 0 0 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+
+.rh_tag, .tags .tag-item {
+    padding: 1px 8px;
+    margin: 3px 2px 2px 2px;
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    background: none;
+    border-radius: 10px;
+    background-color: rgba(var(--accent),0.2) !important;
+}
+
+.rh_tag:hover, .tags .tag-item:hover {
+    background-color: rgba(var(--accent),0.4) !important;
+}
+
+.tags .tag-item .remove-button {
+    margin: 0 0 0 5px;
+    padding: 0;
+    border: none;
+    background: 0 0;
+    cursor: pointer;
+    vertical-align: middle;
+    font: 700 16px Arial,sans-serif;
+}

@@ -19,7 +19,7 @@ namespace HTMLGen {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -57,72 +57,6 @@ namespace HTMLGen {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;body&gt;
-        ///    &lt;header&gt;
-        ///        &lt;nav class=&quot;navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3&quot;&gt;
-        ///            &lt;div class=&quot;container accent&quot;&gt;
-        ///                &lt;a class=&quot;navbar-brand&quot; asp-area=&quot;&quot; asp-page=&quot;/Index&quot;&gt;
-        ///                    &lt;!--Logo--&gt;
-        ///                    &lt;svg version=&quot;1.0&quot; class=&quot;amicitialogo&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;
-        ///                         width=&quot;500.000000pt&quot; height=&quot;500.000000pt&quot; viewBox=&quot;0 0 500.000000 500.000000&quot;
-        ///                         preserveAspectRat [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string body {
-            get {
-                return ResourceManager.GetString("body", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to     &lt;/main&gt;
-        ///&lt;/div&gt;
-        ///&lt;!-- Footer --&gt;
-        ///&lt;br&gt;
-        ///&lt;br&gt;
-        ///&lt;footer class=&quot;footer text-muted&quot;&gt;
-        ///    &lt;div class=&quot;container&quot;&gt;
-        ///        &lt;div class=&quot;columns&quot;&gt;
-        ///            &lt;div class=&quot;column col-6&quot;&gt;
-        ///                &amp;copy; ShrineFox 2020 - 2021 &lt;span class=&quot;g-ytsubscribe&quot; data-channel=&quot;ShrineFox&quot; data-layout=&quot;default&quot; data-count=&quot;default&quot;&gt;&lt;/span&gt;
-        ///                &lt;script&gt;
-        ///                        document.addEventListener(&quot;DOMContentLoaded&quot;, function (event) {
-        ///                            var controller = new YTV(&apos;YourPl [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string footer {
-            get {
-                return ResourceManager.GetString("footer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;!DOCTYPE html&gt;
-        ///&lt;html lang=&quot;en&quot;&gt;
-        ///&lt;head&gt;
-        ///    &lt;meta charset=&quot;utf-8&quot; /&gt;
-        ///    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-        ///    &lt;title&gt;@ViewData[&quot;Title&quot;] - ShrineFox.com&lt;/title&gt;
-        ///    &lt;link rel=&quot;stylesheet&quot; href=&quot;~/lib/bootstrap/dist/css/bootstrap.min.css&quot; /&gt;
-        ///    &lt;link rel=&quot;stylesheet&quot; href=&quot;~/css/spectre.min.css&quot; /&gt;
-        ///    &lt;link rel=&quot;stylesheet&quot; href=&quot;~/css/spectre-icons.min.css&quot; /&gt;
-        ///    &lt;link rel=&quot;stylesheet&quot; href=&quot;~/css/ytv.css&quot; /&gt;
-        ///    &lt;link rel=&quot;stylesheet&quot; href=&quot;~/css/theme/th [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string head {
-            get {
-                return ResourceManager.GetString("head", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string index {
-            get {
-                return ResourceManager.GetString("index", resourceCulture);
             }
         }
     }

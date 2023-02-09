@@ -1,0 +1,70 @@
+﻿            </form>
+            <footer>
+            <!--ShrineFox Footer-->
+            <hr>
+            <div class="columns">
+                <div class="column col-6 col-sm-12">
+                    ShrineFox 2020 - 2023
+                    <br><a href="https://ko-fi.com/shrinefox"><i class="fa fa-coffee"></i> Support</a> |
+                    <a href="https://bit.ly/shrinefox"><i class="fab fa-trello"></i> Progress</a> |
+                    <a href="https://shrinefox.github.io/labs"><i class="fa fa-flask"></i> Labs</a> |
+                    <a href="https://shrinefox.github.io/privacy"><i class="fa fa-user-secret"></i> Privacy</a> |
+                    <a href="https://shrinefox.github.io/terms"><i class="fas fa-thumbs-up"></i> Terms</a>
+                    <br>This site is NOT affiliated, associated, authorized, endorsed by, or in any way officially connected with
+                    <a href="http://www.atlus.co.jp/">Atlus Co., Ltd</a>, <a href="http://atlus.com/">Atlus U.S.A., Inc.</a> or
+                    <a href="http://sega.jp/">Sega Games Co., Ltd</a>, or any of its subsidiaries or its affiliates.
+                </div>
+                <div class="column col-6 form-group col-sm-12">
+                    <!--Theme Select-->
+                    <select id="color" name="color" class="form-select" onchange="ColorSelect()">
+                        <option value="">Select Theme</option>
+                        <option value="Red">Red</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Green">Green</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Violet">Violet</option>
+                        <option value="Pink">Pink</option>
+                        <option value="Magenta">Magenta</option>
+                        <option value="Custom">Custom</option>
+                    </select>
+                    <!--Color Picker-->
+                    <script type="text/javascript">
+                        jscolor.presets.default = {
+                            format: 'rgb', previewSize: 20, paletteCols: 1,
+                            backgroundColor: 'rgb(var(--bg))', borderColor: 'rgb(var(--bg))',
+                            padding: 5, width: 100, height: 100, mode: 'HVS',
+                            controlBorderColor: 'rgb(var(--bg))', sliderSize: 8, shadow: false
+                        };
+                    </script>
+                    <span class="column col-6 form-group">
+                        <label class="form-switch">
+                            <input type="checkbox" id="darkToggle" onclick="DarkModeSelect()">
+                            <i class="form-icon"></i> Dark Mode
+                        </label>
+                    </span>
+                    <span class="column col-6 form-group" id="colorpicker" style="display:none;">
+                        <button id="customaccent" data-jscolor="{onChange: 'updateAccent(this)',value:'rgb(var(--accent))', alpha:1}">Accent</button>
+                    </span>
+                </div>
+            </div>
+            <!--AdSense-->
+            <div class="ad">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9519592525056753"
+                        crossorigin="anonymous"></script>
+            </div>
+            <script type="text/javascript">
+                document.addEventListener("DOMContentLoaded", function (event) {
+                    var controller = new YTV('YourPlayerID', {
+                        channelId: 'UCrB3t1zAQPwAeWtI8RZIOvQ',
+                        playlist: 'PLU6By7bu-RSsXcvqRkDdh3R4OGva8_No4',
+                        responsive: true
+                    });
+                });
+            </script>
+            <!--End ShrineFox Footer-->
+        </footer>
+    </main>
+</section>
+</body>
+</html>

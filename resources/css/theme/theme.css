@@ -1,0 +1,238 @@
+﻿:root {
+    --accent: 92,149,199;
+    --text: 225,225,225;
+    --accenttext: 255,255,255;
+    --bg: 01,04,09;
+    --margin: 2em;
+}
+
+html, body {
+    background: rgba(var(--bg), 1.0);
+    color: rgba(var(--text), 1.0) !important;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+main {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+form {
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+}
+
+footer {
+    margin: var(--margin);
+}
+
+hr {
+    border-top: 1px solid rgba(var(--text), 0.1) !important;
+}
+
+a {
+    color: rgba(var(--accent), 1.0) !important;
+}
+
+    a:hover, a:active, a.text-dark:focus, a.text-dark:hover {
+        color: rgba(var(--accent), 1.0) !important;
+        text-decoration: underline;
+    }
+
+::selection { /* WebKit/Blink Browsers */
+    background: rgba(var(--accent), 0.5);
+}
+
+::-moz-selection { /* Gecko Browsers */
+    background: rgba(var(--accent), 0.5);
+}
+
+.text-dark {
+    color: rgba(var(--text), 1.0);
+}
+
+.text-muted {
+    color: rgba(var(--text), 0.5) !important;
+}
+
+.text-light {
+    color: rgba(var(--accenttext), 1.0) !important;
+}
+
+.form-select {
+    color: rgba(var(--accent), 1.0) !important;
+    background: rgba(var(--bg), 1.0) !important;
+}
+
+button:focus {
+    outline: 0px;
+}
+
+.card {
+    background: rgba(var(--accent), 0.03);
+    margin-bottom: var(--margin);
+    border: none !important;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(var(--accent), 0.1), -1px 1px 3px rgba(var(--accent), 0.1);
+}
+
+.card-header {
+    background-color: transparent !important;
+    border-bottom: none !important;
+}
+
+.btn.btn-primary, .pagination .page-item.active a {
+    background: rgba(var(--accent), 0.5) !important;
+    border-color: rgba(var(--accent), 1) !important;
+    color: rgba(var(--accenttext), 1) !important;
+}
+
+.yt-overlay {
+    position: absolute;
+    top: 0;
+    font-weight: 700;
+    margin-left: 40%;
+    text-align: right;
+    z-index: 1;
+    font-size: 55pt;
+}
+
+.img-responsive {
+    max-height: 125px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navipath {
+    font-weight: bold;
+    padding: var(--margin) 0 var(--margin) 0;
+}
+
+.navipath i.fa.fa-angle-right {
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+}
+
+.nav-item {
+    cursor: pointer;
+}
+
+.table td, .table th {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+.table.table-striped tbody tr:nth-of-type(odd) {
+    background: rgba(var(--accent),0.25) !important;
+}
+
+.table.table-hover tbody tr:hover {
+    background: rgba(var(--accent),0.5) !important;
+}
+
+.table {
+    color: rgba(var(--text), 1) !important;
+}
+
+tr {
+    color: rgba(var(--text), 1) !important;
+}
+
+.menu .menu-item > a:focus, .menu .menu-item > a:hover {
+    background: rgba(var(--accent), 0.3) !important;
+}
+
+.menu .menu-item > a.active, .menu .menu-item > a:active {
+    background: rgba(var(--accent), 0.3) !important;
+    border-left: 7px solid rgba(var(--accent), 0.3) !important;
+}
+
+.menu-item active {
+    background: rgba(var(--accent), 0.3) !important;
+}
+
+.menu .menu-item > a {
+    color: var(--accent) !important;
+}
+
+svg.amicitialogo {
+    width: 150px;
+    height: 150px;
+    margin-left: 25px;
+}
+
+svg path, i.fas:before, i.fab:before {
+    fill: rgba(var(--accent), 1.0) !important;
+    color: rgba(var(--accent), 1.0) !important;
+}
+
+/* Forum */
+
+#contentcolumn {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.forabg, .forumbg, .viewtopic_wrapper {
+    background-color: transparent !important;
+}
+
+.site-content {
+    max-width: 100% !important;
+}
+
+.forumlist_grid_icons li.row {
+    width: 30% !important;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) .forumlist_grid li.row, .forumlist_grid_icons li.row {
+    width: 30% !important;
+}
+
+@media (min-width: 768px) and (max-width: 991px) .forumlist_grid li.row, .forumlist_grid_icons li.row {
+    width: 30% !important;
+}
+
+li.row {
+    box-shadow: 1px 1px 3px rgba(var(--accent), 0.1), -1px 1px 3px rgba(var(--accent), 0.1) !important;
+    background: rgba(var(--accent), 0.03) !important;
+    border-radius: 4px !important;
+    margin: calc(var(--margin)/2) !important;
+    padding: 0px !important;
+}
+
+.forumlist_grid li.row, .grid_image_container, .forumlist_grid_forum_image, .grid_colour_overlay, .grid_tile_full_bg_img {
+    border-radius: 4px !important;
+}
+
+.forumlist_grid_icons .grid_image_container {
+    margin-bottom: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0px !important;
+    background: rgba(var(--accent),0.1) !important;
+}
+
+.fd_dark .navbar_o_header .navbar, .fd_dark .forabg, .fd_dark .forumbg, .fd_dark li.row, .fd_dark .bg1, .fd_dark .bg2, .fd_dark .bg3, .fd_dark .tabs .activetab > a, .fd_dark .tabs a:hover, .fd_dark ul.cplist, .fd_dark .panel, .fd_dark blockquote blockquote, .fd_dark .panel blockquote, .fd_dark .panel blockquote blockquote blockquote, .fd_dark .panel .codebox, .fd_dark .dropdown .dropdown-contents, .fd_dark .jumpbox-cat-link, .fd_dark .jumpbox-sub-link, .fd_dark .jumpbox-forum-link, .fd_dark .cp-main .message-box textarea, .fd_dark fieldset.quick-login input.inputbox, .fd_dark .fancy_panel, .fd_dark .dropdown-extended .header, .fd_dark .forumlist_grid .grid_image_container, .fd_dark body.content_block_header_stripe li.header, .fd_dark .forumlist_grid_icons .grid_image_container {
+    background: rgba(var(--accent),0.05) !important;
+}
+
+    .fd_dark #inner-wrap, .fd_dark.navbar_o_header .navbar, .fd_dark .panel-container .panel, .fd_dark .navigation .active-subsection a, .fd_dark .navigation a:hover, .fd_dark .cp-mini, .fd_dark .codebox, .fd_dark .codebox code, .fd_dark blockquote, .fd_dark blockquote blockquote blockquote, .fd_dark .panel blockquote blockquote, .fd_dark .attachbox, .fd_dark .message-box textarea, .fd_dark .phpbb_alert, .fd_dark select, .fd_dark .minitabs a:hover, .fd_dark .minitabs .activetab > a, .fd_dark .minitabs .activetab > a:hover, .fd_dark .cp-main .pm, .fd_dark .bg3 .topicreview .bg2, .fd_dark .bg3 .topicreview .bg1, .fd_dark .forumlist_grid_icons .forabg {
+        background-color: transparent !important;
+    }
+
+        .fd_dark #inner-wrap, .fd_dark.navbar_o_header .navbar, .fd_dark .panel-container .panel, .fd_dark .navigation .active-subsection a, .fd_dark .navigation a:hover, .fd_dark .cp-mini, .fd_dark .codebox, .fd_dark .codebox code, .fd_dark blockquote, .fd_dark blockquote blockquote blockquote, .fd_dark .panel blockquote blockquote, .fd_dark .attachbox, .fd_dark .message-box textarea, .fd_dark .phpbb_alert, .fd_dark select, .fd_dark .minitabs a:hover, .fd_dark .minitabs .activetab > a, .fd_dark .minitabs .activetab > a:hover, .fd_dark .cp-main .pm, .fd_dark .bg3 .topicreview .bg2, .fd_dark .bg3 .topicreview .bg1, .fd_dark .forumlist_grid_icons .forabg, .navbar_footer, .copyright_bar {
+            background-color: transparent !important;
+        }
+
+.navbar {
+    background-color: rgba(var(--accent),0.1) !important;
+    margin-top: var(--margin);
+}
+
+.forumlist_grid_icons li.row {
+    width: 100% !important;
+}

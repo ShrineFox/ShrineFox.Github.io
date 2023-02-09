@@ -2,7 +2,6 @@ C:\Users\Ryan\Documents\GitHub\ShrineFox.Github.io\bin\Debug\HTMLGen.exe.config
 C:\Users\Ryan\Documents\GitHub\ShrineFox.Github.io\bin\Debug\HTMLGen.exe
 C:\Users\Ryan\Documents\GitHub\ShrineFox.Github.io\bin\Debug\HTMLGen.pdb
 C:\Users\Ryan\Documents\GitHub\ShrineFox.Github.io\obj\Debug\HTMLGen.csproj.AssemblyReference.cache
-C:\Users\Ryan\Documents\GitHub\ShrineFox.Github.io\obj\Debug\HTMLGen.csproj.SuggestedBindingRedirects.cache
 C:\Users\Ryan\Documents\GitHub\ShrineFox.Github.io\obj\Debug\HTMLGen.Resources.resources
 C:\Users\Ryan\Documents\GitHub\ShrineFox.Github.io\obj\Debug\HTMLGen.csproj.GenerateResource.cache
 C:\Users\Ryan\Documents\GitHub\ShrineFox.Github.io\obj\Debug\HTMLGen.csproj.CoreCompileInputs.cache
