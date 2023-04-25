@@ -1,0 +1,144 @@
+@font-face {
+	font-family: 'typesauce';
+	src: url('./typesauce.woff2') format('woff2'),
+		 url('./typesauce.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.typesauce {
+	font-family: 'typesauce';
+	font-weight: 100;
+	padding: 0.5em;
+	text-align: center;
+}
+
+@keyframes bg {
+  from {
+	background-position:  256px 0;
+  }
+  
+  to {
+	background-position:  0 256px;
+  }
+}
+
+@keyframes splat {
+  from {
+	background-position:  0px 512px;
+  }
+  
+  to {
+	background-position:  0px 0px;
+  }
+}
+
+body {
+  background-image: url(./images/shroom.png);
+  animation: 4s linear 0s infinite bg;
+  background-repeat: repeat;
+  font-size: 15pt;
+}
+
+.wrapper {
+	background: linear-gradient(50deg, rgba(23,21,54,0.6) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 47%, rgba(54,102,70,1) 100%);
+	position: fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:0;
+}
+
+.content {
+	z-index: 2;
+	position: relative;
+	background: url(./images/splatter.png);
+	background-repeat: repeat;
+	animation: 6s linear 0s infinite splat;
+	color: #fff;
+	margin-bottom: 120px;
+	box-shadow: 0px 1px 22px #222;
+}
+
+.vineborder {
+  background-repeat: repeat-x;
+  height: 40px;
+}
+
+.vineborder.top {
+	background-image: url(./images/vine_border.png);
+	margin-bottom: .5em;
+}
+
+.vineborder.bottom {
+	background-image: url(./images/vine_border2.png);
+	margin-top: .5em;
+}
+
+a {
+	color: #00FF8D;
+}
+
+a:hover, a:visited {
+	color: #26F56C;
+}
+
+.toggle {
+	border-bottom: 1px solid #fff;
+	margin-bottom: 0.5em;
+}
+.toggle .toggle-title {
+	position: relative;
+	display: block;
+	padding-bottom: 12px;
+}
+.toggle .toggle-title h3 {
+  font-size: 20px;
+  margin: 0px;
+  line-height: 1;
+  cursor: pointer;
+  font-weight: 200;
+}
+.toggle .toggle-inner {
+  padding: 7px 25px 10px 25px;
+  display: none;
+  margin: -7px 0 6px;
+}
+.toggle .toggle-inner div {
+  max-width: 100%;
+  border-color: rgba(194, 225, 245, 0);
+  border-color: transparent;
+  border-bottom-color: #F2EEE6;
+  border-width: 17px;
+  margin-left: -17px;
+}
+ul, ol {
+	list-style-type: circle;
+}
+.toggle .toggle:before {
+  content: "";
+  border-color: transparent #ccc;
+  border-style: solid;
+  border-width: 5px 0 5px 8px;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -16px;
+  top: 17px;
+  position: relative;
+}
+.toggle .toggle-title .title-name {
+  display: block;
+  padding: 25px 25px 14px;
+}
+.column {
+	height: auto;
+	position: relative;
+}
+.column:hover img {
+	max-height: 100%;
+	max-width: 100%;
+	-webkit-transition: width 1s, height 1s;
+	transition: width 1s, height 1s;
+}
